@@ -3,6 +3,9 @@ from lxml import etree
 from os.path import splitext
 from errors.py import *
 
+#This is a Git Test Comment
+#my milkshake brings all the boys to the yard
+
 class TGML:
 	properties = {
 		'Id': '',

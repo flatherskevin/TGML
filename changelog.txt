@@ -1,4 +1,5 @@
 Authors: Kevin Flathers, Dominic Lopriore
+Collaborators: Dominic Lopriore
 
 Version 0.1 Initial release
 	-TGML Class
