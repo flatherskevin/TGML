@@ -1,0 +1,7 @@
+Authors: Kevin Flathers, Dominic Lopriore
+
+Version 0.1 Initial release
+	-TGML Class
+		+	6/5/2017 added to GitHub
+	-Errors
+		+	6/5/2017 added errors.py to GitHub
