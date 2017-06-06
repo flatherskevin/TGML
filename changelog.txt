@@ -1,8 +1,20 @@
 Authors: Kevin Flathers, Dominic Lopriore
 
++	Added
+-	Deleted
+%	Changed
+
 Version 0.1 Initial release
 	-TGML Class
 		+	6/5/2017 added to GitHub
+		%	6/6/2017 changed check_file_contents() to validate_file()
+		%	validate_file() now takes in optional parameters
+				extension_check and tag_check to define what type of
+				validation should be done
+		+	static property SUPPORTED_CHILDREN tuple that declares all
+				the child tag types that are supported by a Tgml element
+		+	validate_element(), which is similar to validate_file() but
+				for a Tgml element instead of a file
 	-Errors
 		+	6/5/2017 added errors.py to GitHub
 	-GitHub Collaborators
