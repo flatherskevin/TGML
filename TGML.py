@@ -6,10 +6,10 @@ from errors.py import *
 #This is a Git Test Comment
 #my milkshake brings all the boys to the yard
 
-class TGML:
+class Tgml:
 	properties = {
 		'Id': '',
-		'Name', '',
+		'Name': '',
 		'Background': '#FFFFFF',
 		'Stretch': 'Uniform',
 		'UseGlobalScripts': 'False',
@@ -21,7 +21,7 @@ class TGML:
 
 	DEFAULT_PROPERTIES = {
 		'Id': '',
-		'Name', '',
+		'Name': '',
 		'Background': '#FFFFFF',
 		'Stretch': 'Uniform',
 		'UseGlobalScripts': 'False',
@@ -31,6 +31,32 @@ class TGML:
 		'Width': '800'
 	}
 
+	SUPPORTED_CHILDREN = (
+		'Animate',
+		'AnimatedImage',
+		'Arc',
+		'Bind',
+		'Chord',
+		'Component',
+		'Curve',
+		'Ellipse',
+		'Expose',
+		'Group',
+		'Image',
+		'Layer',
+		'Line',
+		'Metadata',
+		'Path',
+		'Pie',
+		'Polygon',
+		'Polyline',
+		'Rectangle',
+		'Script',
+		'TargetArea',
+		'Text',
+		'TextBox'
+	)
+
 	def __init__(self, obj_in, input_type='file'):
 		self.obj_in = obj_in
 		if input_type == 'file':
@@ -38,7 +64,7 @@ class TGML:
 		elif input_type == 'element':
 			self.element = self.obj_in
 		else:
-			raise BadInputObject 'The object input to the TGML o'
+			raise BadInputObject('Input type does not exist')
 
 	#Fixes CDATA issue with all scripts under 'element'
 	def fix_scripts(self, element):
@@ -51,37 +77,38 @@ class TGML:
 			expose = str(item.get('ExposedAttribute'))
 			item.getparent().set(expose, value)
 
-	#Compiles the TMGML object
+	#Compiles the Tgml object
 	def compile(self):
 		raise NotImplementedError
 
-	#Sets TGML object properties
+	#Sets Tgml object properties
 	def set_properties(self):
 		raise NotImplementedError
 
-	#Transforms the TGML object
+	#Transforms the Tgml object
 	def transform(self):
 		raise NotImplementedError
 
-	#Prepares an element document for successful use
+	#Sets Tgml properties
+	#Takes in a dictionary
 	def set_properties()(self, properties):
 		for key in properties.keys():
 			self.checkset_property(self.element, key, properties[key])
 
 	#Check if property is set to a value, then set it to a new value
-	def checkset_property(self, element,attribute, value, valueCheck='None'):
-		if(str(element.get(attribute)) == valueCheck):
+	def checkset_property(self, element, attribute, value, value_check='None'):
+		if(str(element.get(attribute)) == value_check):
 			element.set(attribute, value)
 
 	#Return etree object from file
 	def read_from_file(self, file):
 		with open(highLight_Script_PATH, 'r') as file:
-			if(check_file_contents(file)):
+			if(validate_file(file)):
 				return etree.fromstring(file.read())
 
-	#Checks file for tmgl properties and returns etree object, or returns 0 if an error occurs
+	#Checks file for Tgml properties and returns etree object, or returns 0 if an error occurs
 	def read_tgml_file(self, file):
-		if(self.check_file_contents(file)):
+		if(self.validate_file(file)):
 			self.element = self.prepare_element((self.read_from_file(file)))
 		else:
 			return etree.Element('Tgml')
@@ -92,17 +119,23 @@ class TGML:
 			save_file.write(content.decode('utf-8'))
 
 	#Checks to see if a file is properly setup for use as a TGML
-	def check_file_contents(self, file):
+	def validate_file(self, file, extension_check=True, tag_check=True):
 		try:
-			if(str(splitext(file)[1]) != '.tgml'):
-				raise BadTGMLFileError("File is not a .tgml file")
+			if extension_check:
+				if(str(splitext(file)[1]) != '.tgml'):
+					raise BadTgmlFileError("File is not a .tgml file")
 			tree = self.read_from_file(file)
-			if(str(tree.tag) == 'Tgml'):
-				return 1
-			else:
-				raise BadTGMLFileError("TGML file does not contain a <Tgml> or <Tgml/> tag at the beginning of the file")
+			if tag_check:
+				if(str(tree.tag) == 'Tgml'):
+					return 1
+				else:
+					raise BadTGMLFileError('TGML file does not contain a <Tgml> or <Tgml/> tag at the beginning / end of the file')
 		except:
 			return 0
 
-	def compile(self, element):
-		self.fix_scripts(element)
+	#Checks that element contents are supported
+	def validate_element(self, children_check=True):
+		if children_check:
+			for child in self.element.xpath("./*"):
+				if child.tag not in SUPPORTED_CHILDREN:
+					raise BadElementChilderror('Element does not support this child: ' + str(child.tag))

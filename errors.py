@@ -1,5 +1,8 @@
 class BadInputObject(Exception):
 	pass
 
-class BadTGMLFile(Exception):
+class BadTgmlFile(Exception):
+	pass
+
+class BadElementChildError(Exception):
 	pass
