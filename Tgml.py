@@ -66,7 +66,7 @@ class Tgml:
 	def __init__(self, obj_in, input_type='file'):
 		self.obj_in = obj_in
 		if input_type == 'file':
-			read_tgml_file(self.obj_in)
+			self.read_tgml_file(self.obj_in)
 		elif input_type == 'element':
 			self.element = self.obj_in
 		else:
