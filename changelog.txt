@@ -1,21 +1,97 @@
 Authors: Kevin Flathers, Dominic Lopriore
 
+#	Subject
 +	Added
 -	Deleted
 %	Changed
 
 Version 0.1 Initial release
-	-TGML Class
-		+	6/5/2017 added to GitHub
-		%	6/6/2017 changed check_file_contents() to validate_file()
-		%	6/6/2017 validate_file() now takes in optional parameters
+	#Animate
+		+	06/07/2017 class added
+	#AnimatedImage
+		+	06/07/2017 class added
+	#Arc
+		+	06/07/2017 class added
+	#Bind
+		+	06/07/2017 class added
+	#Chord
+		+	06/07/2017 class added
+	#Component
+		+	06/07/2017 class added
+	#ConvertCustom
+		+	06/07/2017 class added
+	#ConvertRange
+		+	06/07/2017 class added
+	#ConvertStatus
+		+	06/07/2017 class added
+	#ConvertText
+		+	06/07/2017 class added
+	#ConvertValue
+		+	06/07/2017 class added
+	#Curve
+		+	06/07/2017 class added
+	#Ellipse
+		+	06/07/2017 class added
+	#Errors
+		+	06/05/2017 added errors.py to GitHub
+	#Expose
+		+	06/07/2017 class added
+	#GradientStop
+		+	06/07/2017 class added
+	#Group
+		+	06/07/2017 class added
+	#Image
+		+	06/07/2017 class added
+	#Layer
+		+	06/07/2017 class added
+	#Line
+		+	06/07/2017 class added
+	#LinearGradient
+		+	06/07/2017 class added
+	#Link
+		+	06/07/2017 class added
+	#Metadata
+		+	06/07/2017 class added
+	#Path
+		+	06/07/2017 class added
+	#Pie
+		+	06/07/2017 class added
+	#Polygon
+		+	06/07/2017 class added
+	#Polyline
+		+	06/07/2017 class added
+	#RadialGradient
+		+	06/07/2017 class added
+	#Rectangle
+		+	06/07/2017 class added
+	#Rotate
+		+	06/07/2017 class added
+	#Scale
+		+	06/07/2017 class added
+	#Script
+		+	06/07/2017 class added
+	#SkewX
+		+	06/07/2017 class added
+	#SkewY
+		+	06/07/2017 class added
+	#TargetArea
+		+	06/07/2017 class added
+	#Text
+		+	06/07/2017 class added
+	#TextBox
+		+	06/07/2017 class added
+	#Tgml Class
+		+	06/05/2017 added to GitHub
+		%	06/06/2017 changed check_file_contents() to validate_file()
+		%	06/06/2017 validate_file() now takes in optional parameters
 				extension_check and tag_check to define what type of
 				validation should be done
-		+	6/6/2017 static property SUPPORTED_CHILDREN tuple that declares all
+		+	06/06/2017 static property SUPPORTED_CHILDREN tuple that declares all
 				the child tag types that are supported by a Tgml element
-		+	6/6/2017 validate_element(), which is similar to validate_file() but
+		+	06/06/2017 validate_element(), which is similar to validate_file() but
 				for a Tgml element instead of a file
-	-Errors
-		+	6/5/2017 added errors.py to GitHub
-	-GitHub Collaborators
-		+	6/5/2017 added Donkey545
+		+	06/06/2017 class and file name change TGML => Tgml
+	#Translate
+		+	06/07/2017 class added
+	#GitHub Collaborators
+		+	06/05/2017 added Donkey545
