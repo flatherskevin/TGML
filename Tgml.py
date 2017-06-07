@@ -65,10 +65,24 @@ class Tgml:
 
 	def __init__(self, obj_in, input_type='file'):
 		self.obj_in = obj_in
+		
+		#obj_in is a tgml file
 		if input_type == 'file':
 			self.read_tgml_file(self.obj_in)
+		
+		#obj_in is the immediate child of the Tgml tag in a file
+		#Helps with creating objects from dependency files
+		elif input_type == 'child':
+			self.read_tgml_file(self.obj_in)
+			self.element = self.element[0]
+			
+		#obj_in is an etree.Element object
 		elif input_type == 'element':
 			self.element = self.obj_in
+			
+		#obj_in is a string
+		elif input_type == 'blank':
+			self.element == etree.Element(obj_in)
 		else:
 			raise BadInputObject('Input type does not exist')
 
