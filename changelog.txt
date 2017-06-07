@@ -91,6 +91,8 @@ Version 0.1 Initial release
 		+	06/06/2017 validate_element(), which is similar to validate_file() but
 				for a Tgml element instead of a file
 		+	06/06/2017 class and file name change TGML => Tgml
+		%	06/07/2017 read_tgml_file(), on failure, no long returns etree Tgml element.
+				Instead it's now set to self.element
 	#Translate
 		+	06/07/2017 class added
 	#GitHub Collaborators

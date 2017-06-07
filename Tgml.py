@@ -13,7 +13,6 @@ from os.path import splitext
 from errors.py import *
 
 #This is a Git Test Comment
-#my milkshake brings all the boys to the yard
 
 class Tgml:
 	properties = {
@@ -120,7 +119,7 @@ class Tgml:
 		if(self.validate_file(file)):
 			self.element = self.prepare_element((self.read_from_file(file)))
 		else:
-			return etree.Element('Tgml')
+			self.element = etree.Element('Tgml')
 
 	#Writes content to a file
 	def write_to_file(self, content, directory, name):
