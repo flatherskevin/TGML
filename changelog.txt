@@ -94,6 +94,7 @@ Version 0.1 Initial release
 		%	06/07/2017 read_tgml_file(), on failure, no long returns etree Tgml element.
 				Instead it's now set to self.element
 		%	06/07/2017 fixed __init__() read_tgml_file() mehtod does not exist
+		%	06/07/2017 __init__() has more options for object creation
 	#Translate
 		+	06/07/2017 class added
 	#GitHub Collaborators
