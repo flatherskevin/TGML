@@ -25,6 +25,8 @@ class Tgml:
 		'Width': '800'
 	}
 
+	exposed_properties = {}
+	
 	DEFAULT_PROPERTIES = {
 		'Id': '',
 		'Name': '',
