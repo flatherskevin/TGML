@@ -15,5 +15,5 @@ class ConvertText(Tgml):
 	DEFAULT_PROPERTIES = {}
 	SUPPORTED_CHILDREN = {}
 
-	def __init__(self):
-		pass
+	def __init__(self, *args, input_type='blank', **kwargs):
+		super(Table, self).__init__(*args, input_type, **kwargs)

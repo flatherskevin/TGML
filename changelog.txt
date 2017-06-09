@@ -8,78 +8,114 @@ Authors: Kevin Flathers, Dominic Lopriore
 Version 0.1 Initial release
 	#Animate
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#AnimatedImage
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Arc
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Bind
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Chord
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Component
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#ConvertCustom
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#ConvertRange
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#ConvertStatus
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#ConvertText
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#ConvertValue
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Curve
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Ellipse
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Errors
 		+	06/05/2017 added errors.py to GitHub
 	#Expose
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#GradientStop
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Group
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Image
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Layer
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Line
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#LinearGradient
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Link
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Metadata
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Path
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Pie
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Polygon
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Polyline
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#RadialGradient
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Rectangle
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Rotate
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Scale
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Script
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#SkewX
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#SkewY
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#TargetArea
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Text
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#TextBox
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#Tgml Class
 		+	06/05/2017 added to GitHub
 		%	06/06/2017 changed check_file_contents() to validate_file()
@@ -98,5 +134,6 @@ Version 0.1 Initial release
 		+	06/08/2017 added exposed_properties attribute as a dictionary for all exposed properties
 	#Translate
 		+	06/07/2017 class added
+		%	06/09/2017 __init__() changed for proper inheritance
 	#GitHub Collaborators
 		+	06/05/2017 added Donkey545
