@@ -91,11 +91,12 @@ class Tgml:
 	#Fixes CDATA issue with all scripts under 'element'
 	def fix_scripts(self, element):
 		for script in element.xpath('.//Script'):
-			script.text = etree.CDATA(script.text)
+			if '<![CDATA[' not in str(script):
+				script.text = etree.CDATA(script.text)
 
 	#Set a value to all exposed attributes nested beneath an element
 	def set_exposed_properties(self, element, value=''):
-		for item in element.xpath(".//*[@Name='RmLabel']"):
+		for item in element.xpath('.//*[@Name="RmLabel"]'):
 			expose = str(item.get('ExposedAttribute'))
 			item.getparent().set(expose, value)
 
@@ -145,7 +146,7 @@ class Tgml:
 		try:
 			if extension_check:
 				if(str(splitext(file)[1]) != '.tgml'):
-					raise BadTgmlFileError("File is not a .tgml file")
+					raise BadTgmlFileError('File is not a .tgml file')
 			tree = self.read_from_file(file)
 			if tag_check:
 				if(str(tree.tag) == 'Tgml'):
@@ -158,6 +159,6 @@ class Tgml:
 	#Checks that element contents are supported
 	def validate_element(self, children_check=True):
 		if children_check:
-			for child in self.element.xpath("./*"):
+			for child in self.element.xpath('./*'):
 				if child.tag not in SUPPORTED_CHILDREN:
 					raise BadElementChilderror('Element does not support this child: ' + str(child.tag))
