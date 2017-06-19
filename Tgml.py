@@ -95,14 +95,23 @@ class Tgml:
 				script.text = etree.CDATA(script.text)
 
 	#Set a value to all exposed attributes nested beneath an element
-	def set_exposed_properties(self, element, value=''):
-		for item in element.xpath('.//*[@Name="RmLabel"]'):
-			expose = str(item.get('ExposedAttribute'))
-			item.getparent().set(expose, value)
+	def set_exposed_properties(self, exposed_properties):
+		for key in exposed_properties.keys()
+			for item in self.element.xpath('.//*'):
+				expose = str(item.get('ExposedAttribute'))
+				if expose == key:
+					item.getparent().set(key, exposed_properties[key])
 
 	#Compiles the Tgml object
-	def compile(self):
-		raise NotImplementedError
+	def compile(self, validate_element=True):
+		try:
+			if validate_element:
+				self.validate_element()
+			self.set_properties(self.properties)
+			self.set_exposed_properties(self.exposed_properties)
+			self.fix_scripts()
+		except err:
+			print(err)
 
 	#Sets Tgml object properties
 	def set_properties(self):
@@ -116,7 +125,7 @@ class Tgml:
 	#Takes in a dictionary
 	def set_properties()(self, properties):
 		for key in properties.keys():
-			self.checkset_property(self.element, key, properties[key])
+			self.element.set(key, properties[key])
 
 	#Check if property is set to a value, then set it to a new value
 	def checkset_property(self, element, attribute, value, value_check='None'):

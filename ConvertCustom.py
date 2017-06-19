@@ -17,3 +17,6 @@ class ConvertCustom(Tgml):
 
 	def __init__(self, *args, input_type='blank', **kwargs):
 		super(Table, self).__init__(*args, input_type, **kwargs)
+
+
+
