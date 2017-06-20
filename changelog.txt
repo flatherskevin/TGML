@@ -133,5 +133,7 @@ Version 0.1 Initial release
 	#Translate
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+	#UniversalPoint
+		+	06/20/2017 class added
 	#GitHub Collaborators
 		+	06/05/2017 added Donkey545

@@ -1,0 +1,836 @@
+<?xml version="1.0"?>
+
+<!--[DocumentInformation]
+Created: 2017-04-12 05:53
+Modified: 2017-06-14 11:34
+-->
+<?tgml version="1.3"?><Tgml ComponentCounter="13" GridSize="5"
+    Height="20" Width="125">
+    <Component AnalogConversion="False" Clip="False" ContentHeight="20"
+        ContentWidth="125" ConversionInputMax="10"
+        ConversionInputMin="0" ConversionOutputMax="100"
+        ConversionOutputMin="0" Decimals="1" DigitalOff="Off"
+        DigitalOn="On" Height="20.0" Id="UP v2.0" Left="0.0"
+        Name="Universal" PointType="m" StateTextInput=""
+        ToolTipEnable="False" ToolTipFill="#E0E0E0" ToolTipFontSize="48"
+        ToolTipStroke="#404040" ToolTipText="" Top="0.0" Units=""
+        Viconics="False" Width="125.0">
+        <Expose ExposedAttribute="Name" Name="Point Bind"/>
+        <Expose ExposedAttribute="PointType" Name="Point Type"/>
+        <Rectangle Fill="#FFFFFF" Height="20" Id="" Left="0.0"
+            Opacity="1.0" RadiusX="5" RadiusY="5" Stroke="#626469"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="125">
+            <LinearGradient EndPoint="0,1">
+                <GradientStop Color="#FEFEFE" Offset="0"/>
+                <GradientStop Color="#DFE0E2" Offset="1.0"/>
+            </LinearGradient>
+        </Rectangle>
+        <Rectangle Fill="None" Height="20" Id="Background" Left="0.0"
+            Opacity="1.0" RadiusX="5" RadiusY="5" Stroke="None"
+            StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="125"/>
+        <Bind Attribute="Priority" Id="Priority" Name="ActiveCommandPriority"/>
+        <Bind Attribute="OOS" Id="OutOfService" Name="OutOfService"/>
+        <Bind Attribute="State" Id="State" Name="State"/>
+        <Bind Attribute="StateText" Id="StateText" Name="StateText"/>
+        <Bind Attribute="RelinquishDefault" Id="RelinquishDefault" Name="RelinquishDefault"/>
+        <Bind Attribute="Value" Id="Value" Name="Value">
+            <Expose ExposedAttribute="Name" Name="Bind Value"/>
+        </Bind>
+        <Bind Attribute="Aarm" Id="Alarm" Name="Alarm">
+            <Expose ExposedAttribute="Name" Name="Bind Alarm"/>
+        </Bind>
+        <Expose ExposedAttribute="Units" Name="Units"/>
+        <Expose ExposedAttribute="Decimals" Name="Decimals"/>
+        <Expose ExposedAttribute="DigitalOff" Name="Digital Off"/>
+        <Expose ExposedAttribute="DigitalOn" Name="Digital On"/>
+        <Expose ExposedAttribute="StateTextInput" Name="Multistate Text"/>
+        <Expose ExposedAttribute="Viconics" Name="Viconics"/>
+        <Expose ExposedAttribute="AnalogConversion" Name="Analog Conversion"/>
+        <Expose ExposedAttribute="ConversionInputMin" Name="Conversion Input Min"/>
+        <Expose ExposedAttribute="ConversionInputMax" Name="Conversion Input Max"/>
+        <Expose ExposedAttribute="ConversionOutputMin" Name="Conversion Output Min"/>
+        <Expose ExposedAttribute="ConversionOutputMax" Name="Conversion Output Max"/>
+        <TextBox FontFamily="Arial" FontSize="15" FontStyle="Normal"
+            FontWeight="Normal" Height="20" HorizontalAlign="Center"
+            Id="Textbox" Left="0.0" Opacity="1.0" Stroke="#000000"
+            TextDecoration="None" Top="0.0" VerticalAlign="Middle"
+                Width="125"><![CDATA[Universal v2.0]]><Expose
+                ExposedAttribute="HorizontalAlign" Name="Text Align"/>
+        </TextBox>
+        <Expose ExposedAttribute="ToolTipText" Name="ToolTip Text"/>
+        <Expose ExposedAttribute="ToolTipFontSize" Name="ToolTip Font Size"/>
+        <Expose ExposedAttribute="ToolTipStroke" Name="ToolTip Font Stroke"/>
+        <Expose ExposedAttribute="ToolTipFill" Name="ToolTip Fill"/>
+        <Expose ExposedAttribute="ToolTipEnable" Name="Tool Tip Enable"/>
+        <Component Clip="False" ContentHeight="20.0" ContentWidth="20.0"
+            Height="20.0" Id="LockoutImage" Left="105" Top="0"
+            Visibility="Hidden" Width="20.0">
+            <Rectangle Fill="#0060FF" Height="20.0" Id=""
+                Left="0.002059936523438" Opacity="1.0" RadiusX="5"
+                RadiusY="5" Stroke="#0060FF" StrokeDashArray="0.0"
+                StrokeWidth="1.0" Top="-0.004470825195312"
+                Visibility="Visible" Width="20.0"/>
+            <Component Clip="False" ContentHeight="14.9"
+                ContentWidth="10.98" Height="14.9" Left="4.9" Top="2.1" Width="10.98">
+                <Ellipse Fill="None" Height="11.474565045404063"
+                    Left="1.163840117470102" Opacity="1.0"
+                    Stroke="#000000" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="0.004533185632425" Width="8.6529504194163"/>
+                <Ellipse Fill="None" Height="8.48120119508107"
+                    Left="2.292485468366976" Opacity="1.0"
+                    Stroke="#000000" StrokeDashArray="0.0"
+                    StrokeWidth="2" Top="1.013312437360696" Width="6.395659717622607"/>
+                <Rectangle Fill="#E0E0E0" Height="9.758053390500265"
+                    Left="0.001410295021856" Opacity="1.0" RadiusX="1"
+                    RadiusY="1" Stroke="#000000" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="5.148217982871444" Width="10.977810064312848"/>
+                <Ellipse Fill="#000000" Height="2.445398465121713"
+                    Left="4.361670955507293" Opacity="1.0"
+                    Stroke="#000000" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="7.434889506074057" Width="2.257288743341974"/>
+                <Rectangle Fill="#000000" Height="3.950257627349686"
+                    Left="4.990315320359628" Opacity="1.0" RadiusX=".25"
+                    RadiusY=".25" Stroke="#000000" StrokeDashArray="0.0"
+                    StrokeWidth=".25" Top="8.845698460414638" Width="1.0"/>
+            </Component>
+        </Component>
+        <Component Clip="False" ContentHeight="20.0" ContentWidth="20.0"
+            Height="20.0" Id="ForceImage" Left="105.0" Top="0.0"
+            Visibility="Hidden" Width="20.0">
+            <Rectangle Fill="#FFD100" Height="20.0" Left="0.0"
+                RadiusX="5" RadiusY="5" Stroke="None" Top="0.0" Width="20.0">
+                <Animate Animation="Stop" Attribute="Fill" Duration="1"
+                    From="#FFD100" To="#FFD100"/>
+            </Rectangle>
+            <Component Clip="False" ContentHeight="10.1"
+                ContentWidth="15.0" Height="10.100000000000001" Left="4"
+                Top="5.0" Width="15.0">
+                <Path Fill="#E3BC67" Name="B1"
+                    PathData="M11.25,10.096130000000017 C12.980770399999997,10.096130000000017 12.6923101,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849399999999,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576710000000276 12.403849399999999,6.0576710000000276 12.980770399999997,6.0576710000000276 12.980770399999997,6.0576710000000276 13.557690399999999,6.0576710000000276 15.0,6.0576710000000276 15.0,4.0384409999999775 13.557690399999999,4.0384409999999775 12.980770399999997,4.0384409999999775 12.6923101,4.0384409999999775 12.115386999999998,4.0384409999999775 13.557690399999999,4.0384409999999775 13.557690399999999,2.0192109999999843 12.115386999999998,2.0192109999999843 9.51923,2.0192109999999843 9.51923,2.0192109999999843 7.2115399999999994,2.0192109999999843 8.6538473000000025,2.0192109999999843 8.6538473000000025,-1.900000000887303E-5 7.2115399999999994,-1.900000000887303E-5 5.76923,-1.900000000887303E-5 4.6153800000000018,-1.900000000887303E-5 3.4615399999999994,0.28844099999997752 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040600999999981 1.1538473000000025,1.7307500000000005 0.725049300000002,2.0655100000000175 0.20812709999999868,2.382092 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.5192109999999843 0.33908739999999682,10.067859999999996 1.1538473000000025,10.096130000000017 1.7307703999999973,10.096130000000017 4.9038473000000025,10.096130000000017 8.6538473000000025,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192109999999843 L5.4807703999999973,2.0192109999999843 M12.115386999999998,4.0384409999999775 L8.3653800000000018,4.0384409999999775 M12.403849399999999,6.0576710000000276 L8.3653800000000018,6.0576710000000276 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                    Stroke="#505050" StrokeDashArray="0.0" StrokeWidth=".5"/>
+                <Path Fill="#FFFFFF"
+                    PathData="M11.25,10.096130000000017 C12.9807706,10.096130000000017 12.692310200000001,8.0769000000000233 11.25,8.0769000000000233 11.826920000000001,8.0769000000000233 11.826920000000001,8.0769000000000233 12.403849600000001,8.0769000000000233 13.846150000000002,8.0769000000000233 13.846150000000002,6.0576730000000225 12.403849600000001,6.0576730000000225 12.9807706,6.0576730000000225 12.9807706,6.0576730000000225 13.5576906,6.0576730000000225 15.0,6.0576730000000225 15.0,4.0384429999999725 13.5576906,4.0384429999999725 12.9807706,4.0384429999999725 12.692310200000001,4.0384429999999725 12.115388000000003,4.0384429999999725 13.5576906,4.0384429999999725 13.5576906,2.0192129999999793 12.115388000000003,2.0192129999999793 9.51923,2.0192129999999793 9.51923,2.0192129999999793 7.2115399999999994,2.0192129999999793 8.6538474999999977,2.0192129999999793 8.6538474999999977,-1.7000000013922545E-5 7.2115399999999994,-1.7000000013922545E-5 5.76923,-1.7000000013922545E-5 4.6153800000000018,-1.7000000013922545E-5 3.4615399999999994,0.28844299999997247 2.3809600000000017,0.58771999999999025 2.0376899999999978,1.040602999999976 1.1538474999999977,1.7307500000000005 0.72504949999999724,2.0655100000000175 0.20812730000000101,2.382093999999995 0.0,2.8845900000000029 0.0,5.1922799999999825 0.0,7.2115099999999757 0.0,9.51921299999998 0.33908759999999916,10.067859999999996 1.1538474999999977,10.096130000000017 1.7307705999999996,10.096130000000017 4.9038474999999977,10.096130000000017 8.6538474999999977,10.096130000000017 11.25,10.096130000000017 M7.2115399999999994,2.0192129999999793 L5.4807706,2.0192129999999793 M12.115388000000003,4.0384429999999725 L8.3653800000000018,4.0384429999999725 M12.403849600000001,6.0576730000000225 L8.3653800000000018,6.0576730000000225 M11.25,8.0769000000000233 L8.3653800000000018,8.0769000000000233"
+                    Stroke="#505050" StrokeDashArray="0.0" StrokeWidth=".5">
+                    <LinearGradient Attribute="Fill" EndPoint="1.0,0.0"
+                        SpreadMethod="Pad" StartPoint="0.0,0.0">
+                        <GradientStop Color="#ABFFFFFF" Offset="0.0"/>
+                        <GradientStop Color="#01FFFFFF" Offset="0.5"/>
+                        <GradientStop Color="#60000000" Offset="1.0"/>
+                    </LinearGradient>
+                </Path>
+            </Component>
+        </Component>
+        <Script Id="UniversalPointScript" Name="UniveralPoint_2.0-Suede"
+            OnDocumentLoad="onDocumentLoad" OnMouseClick="onMouseClick"
+            OnMouseDown="" OnMouseMove="" OnMouseOut="" OnMouseOver=""
+            OnMouseUp="" OnSignalChange="onSignalChange"><![CDATA[/*  
+    Universal Point
+    Version 2.0 - Suede
+    
+    Author: Kevin Flathers
+    Date Created: 04/12/2017
+    Last Edited By: Kevin Flathers
+    Date Last Edited: 06/12/2017    
+*/
+
+try{
+    //Default variables
+    var component;
+    var SCRIPT_NAME = "UniversalPoint";
+
+
+    //Binds
+    var valueBind;
+    var valueBindValue = null;
+    var valueBindName;
+    var alarmBind;
+    var alarmBindValue = null;
+    var alarmBindName;
+    var priorityBind;
+    var priorityBindValue = null;
+    var priorityBindName;
+    var oosBind;
+    var oosBindValue = null;
+    var oosBindName;
+    var stateBind;
+    var stateBindValue = null;
+    var stateBindName;
+    var stateTextBind;
+    var stateTextBindValue = null;
+    var relinquishDefaultBind;
+    var relinquishDefaultBindValue;
+    var relinquishDefaultBindName;
+    
+    //Forcing
+    var forceState = 0;
+    var forceStroke = "#FFD100";
+    var forceStrokeWidth = 2;
+    var forceImage;
+    
+    //Locking Out - SE8000 Series
+    var lockoutState = 0;
+    var lockoutStroke = "#0060FF";
+    var lockoutStrokeWidth = 2;
+    var lockoutImage;
+    
+    //Alarming
+    var alarmState = 0;
+    var alarmStroke = "#F0080E";
+    var alarmFill = "#F0080E";
+    var alarmTextboxStroke = "#FFFFFF"
+    
+    //General
+    var background;
+    var backgroundStroke;
+    var backgroundStrokeWidth;
+    var backgroundFill;
+    var textbox;
+    var textboxStroke;
+    var pointType;
+    var units;
+    var decimals;
+    var digitalOn;
+    var digitalOff;
+    var stateTextInput = {};
+    var viconics;
+    var analogConversion;
+    var conversionInputMin;
+    var conversionInputMax;
+    var conversionOutputMin;
+    var conversionOutputMax;
+
+} catch(err){
+    console.log(err + " " + err.stack);
+}
+
+function onDocumentLoad(evt){
+    try{
+        component = evt.getCurrentTarget();
+        valueBind = nodeFilter(component, "Id", "Value");
+        alarmBind = nodeFilter(component, "Id", "Alarm");
+        priorityBind = nodeFilter(component, "Id", "Priority");
+        oosBind = nodeFilter(component, "Id", "OutOfService");
+        stateBind = nodeFilter(component, "Id", "State");
+        stateTextBind = nodeFilter(component, "Id", "StateText");
+        relinquishDefaultBind = nodeFilter(component, "Id", "RelinquishDefault");
+        viconics = component.getAttribute("Viconics");
+        analogConversion = component.getAttribute("AnalogConversion");
+        conversionInputMin = component.getAttribute("ConversionInputMin");
+        conversionInputMax = component.getAttribute("ConversionInputMax");
+        conversionOutputMin = component.getAttribute("ConversionOutputMin");
+        conversionOutputMax = component.getAttribute("ConversionOutputMax");
+        if(conversionInputMin == "" || conversionInputMin == null){
+            conversionInputMin = 0;
+        }
+        if(conversionInputMax == "" || conversionInputMax == null){
+            conversionInputMax = 10;
+        }
+        if(conversionOutputMin == "" || conversionOutputMin == null){
+            conversionOutputMin = 0;
+        }
+        if(conversionOutputMax == "" || conversionOutputMax == null){
+            conversionOutputMax = 100;
+        }
+        conversionInputMin = Number(conversionInputMin);
+        conversionInputMax = Number(conversionInputMax);
+        conversionOutputMin = Number(conversionOutputMin);
+        conversionOutputMax = Number(conversionOutputMax);
+        background = nodeFilter(component, "Id", "Background");
+        textbox = nodeFilter(component, "Id", "Textbox");
+        pointType = component.getAttribute("PointType");
+        forceImage = nodeFilter(component, "Id", "ForceImage");
+        lockoutImage = nodeFilter(component, "Id", "LockoutImage");
+        digitalOn = component.getAttribute("DigitalOn");
+        digitalOff = component.getAttribute("DigitalOff");
+        if(digitalOn == "" || digitalOn == null){
+            digitalOn = "Active";
+        }
+        if(digitalOff == "" || digitalOff == null){
+            digitalOff = "Inactive";
+        }
+        units = component.getAttribute("Units");
+        decimals = parseInt(component.getAttribute("Decimals"));
+        if(decimals == "" || decimals == null){
+            decimals = 0;
+        }
+        var stateTextArr = String(component.getAttribute("StateTextInput")).split(":");
+        for(var i = 0; i < stateTextArr.length; i++){
+            var arr = stateTextArr[i].split(",");
+            if(arr[1] == "" || arr[1] == null || typeof arr[1] == "undefined"){
+                arr[1] = String(arr[0]);
+            }
+            stateTextInput[arr[0]] = arr[1];
+        }
+        backgroundStroke = background.getAttribute("Stroke");
+        backgroundStrokeWidth = background.getAttribute("StrokeWidth");
+        backgroundFill = background.getAttribute("Fill");
+        textboxStroke = textbox.getAttribute("Stroke");
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function onSignalChange(evt){
+    try{
+        var target = evt.getTarget();
+        targetId = target.getAttribute("Id");
+        
+        if(targetId == "StateText"){
+        } else if(targetId == "Value"){
+            switch(String(pointType).toLowerCase()){
+            case "d": case "digital": case "b": case "binary":
+                getBool(evt.getValue()) ? textbox.setAttribute("Content", digitalOn) : textbox.setAttribute("Content", digitalOff);
+                break;
+            case "s": case "string":
+                textbox.setAttribute("Content", evt.getValue());
+                break;
+            case "t": case "tristate": case "m": case "multistate":
+                var currentStateText = component.getAttribute("StateText");
+                var multistateText;
+                if(currentStateText == "" || currentStateText == null){
+                    multistateText = evt.getValue();
+                } else{
+                    stateTextBindValue = component.getAttribute("StateText");
+                    var arr = stateTextBindValue.split(";")
+                    multistateText = arr[Number(evt.getValue()) - 1];
+                    if(typeof multistateText == "undefined"){
+                        multistateText = Number(evt.getValue());
+                    }
+                }
+                Object.keys(stateTextInput).forEach(function(key){
+                    if(parseInt(evt.getValue()) == parseInt(key)){
+                        multistateText = stateTextInput[key];
+                    }
+                });
+                textbox.setAttribute("Content", multistateText);
+                break;
+            default:
+                if(units == "" || units == null){
+                    units = evt.getUnit();
+                }
+                if(getBool(analogConversion)){
+                    var calculated = Number(evt.getValue()) * (conversionOutputMax - conversionOutputMin) / (conversionInputMax - conversionInputMin);
+                    valueBindValue = calculated.toFixed(decimals);
+                } else{
+                    valueBindValue = parseFloat(evt.getValue()).toFixed(decimals);
+                }
+                if(units == "" || units == null){
+                    textbox.setAttribute("Content", valueBindValue);
+                } else {
+                    textbox.setAttribute("Content", valueBindValue + " " + units);
+                }
+            }
+        } else if(targetId == "Alarm"){
+            if(getBool(evt.getValue())){
+                alarmState = 1;
+            } else {
+                alarmState = 0;
+            }
+        }
+        forceCheck(evt);
+        lockoutCheck(evt);
+        alarmStyle();
+
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function onMouseClick(evt){
+    try{
+        if(evt.getButton() == 0){
+            evt.preventDefault();
+            if(getBool(viconics)){
+                relinquishDefaultBindName = relinquishDefaultBind.getFullBindName();
+                if(!invoke(relinquishDefaultBindName, "EditProperties")){
+                    valueBindName = valueBind.getFullBindName();
+                    invoke(valueBindName, "EditProperties");
+                } else{
+                    invoke(relinquishDefaultBindName, "EditProperties");
+                }
+            } else{
+                valueBindName = valueBind.getFullBindName();
+                invoke(valueBindName, "EditProperties");
+            }
+        }
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function alarmStyle(){
+    try{
+        if(alarmState){
+            if(!forceState && !lockoutState){
+                background.setAttribute("Stroke", alarmStroke);
+            }
+            background.setAttribute("Fill", alarmFill);
+            textbox.setAttribute("Stroke", alarmTextboxStroke);
+        } else {
+            if(!forceState && !lockoutState){
+                background.setAttribute("Stroke", backgroundStroke);
+            }
+            background.setAttribute("Fill", backgroundFill);
+            textbox.setAttribute("Stroke", textboxStroke);
+        }
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function forceStyle(){
+    try{
+        if(forceState){
+            background.setAttribute("Stroke", forceStroke);
+            background.setAttribute("StrokeWidth", forceStrokeWidth);
+            forceImage.setAttribute("Visibility", "Visible");
+        } else{
+            background.setAttribute("Stroke", backgroundStroke);
+            background.setAttribute("StrokeWidth", backgroundStrokeWidth);
+            forceImage.setAttribute("Visibility", "Hidden");
+        }
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function lockoutStyle(){
+    try{
+        if(lockoutState && !forceState){
+            background.setAttribute("Stroke", lockoutStroke);
+            background.setAttribute("StrokeWidth", lockoutStrokeWidth);
+            lockoutImage.setAttribute("Visibility", "Visible");
+        } else{
+            if(!forceState){
+                background.setAttribute("Stroke", backgroundStroke);
+                background.setAttribute("StrokeWidth", backgroundStrokeWidth);
+            }
+            lockoutImage.setAttribute("Visibility", "Hidden");
+        }
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function lockoutCheck(evt){
+    try{
+        var target = evt.getTarget();
+        targetId = target.getAttribute("Id");
+        
+        //For Viconics series controllers, if any Priority is written to, then the physical device is locked out
+        if(targetId == "Priority" && getBool(viconics)){
+            if(priorityBindValue == "" || priorityBindValue == null) {
+                lockoutState = 0;
+            } else{
+                lockoutState = 1;
+            }
+        }
+        lockoutStyle();
+    } catch(err){
+        handleError(err);
+    }
+}
+
+
+function forceCheck(evt){
+    try{
+        var target = evt.getTarget();
+        targetId = target.getAttribute("Id");
+        relinquishDefaultBindValue = component.getAttribute("RelinquishDefault");
+        
+        //Priority checking must come before OutOfService checking since Values and Outputs have an unused property of OutOfService
+        if(targetId == "Priority"){
+            priorityBindValue = Number(evt.getValue());
+            if(priorityBindValue == 8){
+                forceState = 1;
+            } else {
+                forceState = 0;
+            }
+        } else if(targetId == "OutOfService"){
+            oosBindValue = evt.getValue();
+            if((getBool(oosBindValue) && (priorityBindValue == "" || priorityBindValue == null) && (relinquishDefaultBindValue == "" || relinquishDefaultBindValue == null)) || priorityBindValue == 8){
+                forceState = 1;
+            } else{
+                forceState = 0;
+            }
+        } else if(targetId == "RelinquishDefault"){
+            relinquishDefaultBindValue = evt.getValue();
+            if(priorityBindValue == 8){
+                forceState = 1;
+            } else{
+                forceState = 0;
+            }
+        } else if(targetId == "State"){
+            stateBindValue = evt.getValue();
+            if(!getBool(stateBindValue) && (oosBindValue == "" || oosBindValue == null) && (priorityBindValue == "" || priorityBindValue == null)){
+                forceState = 1;
+            } else{
+                forceState = 0;
+            }
+        } else if(targetId == "Value" && (stateBindValue == "" || stateBindValue == null) && (oosBindValue == "" || oosBindValue == null) && (priorityBindValue == "" || priorityBindValue == null)){
+            forceState = (parseInt(evt.getStatus()) == 3) ? 1 : 0;
+            
+        }
+        forceStyle();
+    } catch(err){
+        handleError(err);
+    }
+    
+}
+
+
+function handleError(err){
+    try{
+        //Get the owner document
+        TGMLDocument = component.getOwnerDocument();
+    
+        console.log(SCRIPT_NAME + " " + err + " " + err.stack);
+        
+        //All binds should be set to null on error
+        var openBinds = component.getElementsByTagName("Bind");
+        if(openBinds.length){
+            for(var i = 0; i < openBinds.length; i++){
+                openBinds.item([i]).setAttribute("Name", "Error");
+            }
+        }
+        
+        //Component must be visible
+        component.setAttribute("Visibility", "Visible");
+        
+        //Error text attributes
+        ERROR = TGMLDocument.createElement("TextBox");
+        ERROR.setAttribute("Id", "ERROR");
+        ERROR.setAttribute("Name", "ERROR");
+        ERROR.setAttribute("Fill", "#505050");
+        ERROR.setAttribute("Opacity", "1");
+        ERROR.setAttribute("Stroke", "#FFCC00");
+        ERROR.setAttribute("Visibility", "Visible");
+        ERROR.setAttribute("Content", "Graphic Script Error Occurred");
+        ERROR.setAttribute("FontFamily", "Arial");
+        ERROR.setAttribute("FontSize", "8");
+        ERROR.setAttribute("FontStyle", "Normal");
+        ERROR.setAttribute("FontWeight", "Bold");
+        ERROR.setAttribute("HorizontalAlign", "Center");
+        ERROR.setAttribute("TextDecoration", "None");
+        ERROR.setAttribute("VerticalAlign", "Middle");
+        ERROR.setAttribute("Left", "0");
+        ERROR.setAttribute("Top", "0");
+        ERROR.setAttribute("Height", component.getAttribute("Height"));
+        ERROR.setAttribute("Width", component.getAttribute("Width"));
+        ERROR.setAttribute("ContentHeight", component.getAttribute("Height"));
+        ERROR.setAttribute("ContentWidth", component.getAttribute("Width"));
+        component.appendChild(ERROR);
+        
+    } catch(err){
+        
+        //If an error happens within error handling, simply print the error to the console
+        console.log("Error in handling " + err + " " + err.stack);
+    }
+
+}
+
+//Filters children of parent and returns child component if only 1 exists, or an array of children if multiple exist
+//nodeFilter(parent node, name of property, property value)
+function nodeFilter(cComp, attrName, attrValue, searchType){
+	try{
+		var returnArr = [];
+        switch(searchType){
+            case 'children':
+                var children = cComp.getChildNodes();
+                break;
+            case 'nested':
+                var children = cComp.getElementsByTagName('*');
+                break;
+            default:
+                var children = cComp.getChildNodes();
+        }
+		for (var i = 0; i < children.length; i++){
+            try{
+                if (children.item([i]).hasAttribute(attrName)){
+                    if (children.item([i]).getAttribute(attrName) == attrValue){
+                        returnArr.push(children.item([i]));
+                    }
+                }
+            } catch(err){}
+		}
+		if (returnArr.length == 1){
+			returnArr = returnArr[0];
+		}
+		return returnArr;
+	} catch(err){
+		handleError(err);
+	}
+}
+
+//Returns boolean 1 or 0 based on if it matches a "true" state
+function getBool(check){
+    try{
+        switch(String(check).toLowerCase()){
+            case "true": case "1": case "active": case "t": case "a": case "on": case "yes": case "y":
+                return 1;
+            default:
+                return 0;
+        }
+    } catch(err){
+        handleError(err);
+    }
+}]]></Script>
+        <Script Id="ToolTip" Name="ToolTip_1.1_Magenta"
+            OnDocumentLoad="onDocumentLoad" OnMouseClick=""
+            OnMouseDown="" OnMouseMove="onMouseMove"
+            OnMouseOut="onMouseOut" OnMouseOver="onMouseOver"
+            OnMouseUp="" OnSignalChange="" ToolTipFill="#E0E0E0"
+            ToolTipFontSize="48" ToolTipStroke="#404040"
+                ToolTipText=""><![CDATA[/*  
+    TooTip For Universal Point (only)
+    Version 1.0 - Magenta
+    
+    Author: Kevin Flathers
+    Date Created: 04/07/2017
+    Last Edited By: Kevin Flathers
+    Date Last Edited: 04/12/2017
+*/
+
+try{
+    //Default variables
+    var component;
+    var SCRIPT_NAME = "toolTip";
+
+
+    //Place script global variables below
+    var toolTipScript;
+    var toolTipText;
+    var toolTip;
+    var mouseX;
+    var mouseY;
+    var translate;
+    var created;
+    var toolTipBind;
+    var toolTipBindValue;
+    var toolTipFontSize = 18;
+    var toolTipStroke;
+    var toolTipFill;
+    var textbox;
+
+} catch(err){
+    console.log(err + " " + err.stack);
+}
+
+function onDocumentLoad(evt){
+    try{
+        component = evt.getCurrentTarget();
+        textbox = nodeFilter(component, "Id", "Textbox");
+        var scripts = component.getElementsByTagName("Script");
+        for(var i = 0; i < scripts.length; i++){
+            if(scripts.item([i]).getAttribute("Id") == "ToolTip"){
+                toolTipScript = scripts.item([i]);
+            }
+        }
+        toolTipText = String(component.getAttribute("ToolTipText"));
+        TGMLDocument = component.getOwnerDocument();
+        TGMLTag = TGMLDocument.getElementsByTagName("Tgml").item([0]);
+        created = 0;
+        toolTipBind = toolTipScript.getElementsByTagName("Bind").item([0]);
+        toolTipFontSize = parseFloat(toolTipScript.getAttribute("ToolTipFontSize"));
+        if(toolTipFontSize == "" || toolTipFontSize == null || toolTipFontSize == 0){
+            toolTipFontSize = 18;
+        }
+        toolTipStroke = String(toolTipScript.getAttribute("ToolTipStroke"));
+        if(toolTipStroke == "" || toolTipStroke == null){
+            toolTipStroke = "#404040";
+        }
+        toolTipFill = String(toolTipScript.getAttribute("ToolTipFill"));
+        if(toolTipFill == "" || toolTipFill == null){
+            toolTipFill = "#E0E0E0";
+        }
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function onMouseOut(evt){
+    try{
+        if(created){
+            TGMLTag.removeChild(toolTip);
+            created = 0;
+        }
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function onMouseOver(evt){
+    try{
+        if(!created){
+            toolTipFontSize = parseFloat(toolTipScript.getAttribute("ToolTipFontSize"));
+            if(toolTipFontSize == "" || toolTipFontSize == null || toolTipFontSize == 0 || isNaN(toolTipFontSize)){
+                toolTipFontSize = 18;
+            }
+
+            mouseX = parseFloat(evt.getScreenX());
+            mouseY = parseFloat(evt.getScreenY());
+            //ToolTip text attributes
+            toolTip = TGMLDocument.createElement("Text");
+            toolTip.setAttribute("Id", "ToolTip");
+            toolTip.setAttribute("Name", "ToolTip");
+            toolTip.setAttribute("Fill", toolTipFill);
+            toolTip.setAttribute("Opacity", "1");
+            toolTip.setAttribute("Stroke", toolTipStroke);
+            if(toolTipText == "" || toolTipText == null){
+                toolTip.setAttribute("Content", "  " + textbox.getAttribute("Content") + "  ");
+            } else{
+                toolTip.setAttribute("Content", "  " + toolTipText + "  ");
+            }
+            toolTip.setAttribute("FontFamily", "Arial");
+            toolTip.setAttribute("FontSize", toolTipFontSize);
+            toolTip.setAttribute("FontStyle", "Normal");
+            toolTip.setAttribute("FontWeight", "Bold");
+            toolTip.setAttribute("HorizontalAlign", "Left");
+            toolTip.setAttribute("TextDecoration", "None");
+            toolTip.setAttribute("VerticalAlign", "Middle");
+            toolTip.setAttribute("Left", 0);
+            toolTip.setAttribute("Top", 0);
+            TGMLTag.appendChild(toolTip);
+            translate = TGMLDocument.createElement("Translate");
+            translate.setAttribute("Id", "Translate");
+            translate.setAttribute("Name", "Translate");
+            translate.setAttribute("X", mouseX + 5);
+            translate.setAttribute("Y", mouseY - 5);
+            toolTip.appendChild(translate);
+            created = 1;
+            if(textbox.getAttribute("Content") == "" || textbox.getAttribute("Content") == null || !Enable(component.getAttribute("ToolTipEnable"))){
+                toolTip.setAttribute("Visibility", "Hidden");
+            }
+            else{
+                toolTip.setAttribute("Visibility", "Visible");
+            }
+            
+        }
+        
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function onMouseMove(evt){
+    try{
+        mouseX = parseFloat(evt.getScreenX());
+        mouseY = parseFloat(evt.getScreenY());
+        translate.setAttribute("X", mouseX + toolTipFontSize / 5);
+        translate.setAttribute("Y", mouseY - toolTipFontSize / 1.5);
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function Enable(attr){
+    try{
+        switch(String(attr).toLowerCase()){
+            case "1": case "on": case "true": case "t": case "active": case "yes": case "y":
+                return 1;
+                break;
+            default:
+                return 0;
+        } 
+    } catch(err){
+        handleError(err);
+    }
+}
+
+function handleError(err){
+    try{
+        //Get the owner document
+        TGMLDocument = component.getOwnerDocument();
+    
+        console.log(SCRIPT_NAME + " " + err + " " + err.stack);
+        
+        //All binds should be set to null on error
+        var openBinds = component.getElementsByTagName("Bind");
+        if(openBinds.length){
+            for(var i = 0; i < openBinds.length; i++){
+                openBinds.item([i]).setAttribute("Name", "Error");
+            }
+        }
+        
+        //Component must be visible
+        component.setAttribute("Visibility", "Visible");
+        
+        //Error text attributes
+        ERROR = TGMLDocument.createElement("TextBox");
+        ERROR.setAttribute("Id", "ERROR");
+        ERROR.setAttribute("Name", "ERROR");
+        ERROR.setAttribute("Fill", "#505050");
+        ERROR.setAttribute("Opacity", "1");
+        ERROR.setAttribute("Stroke", "#FFCC00");
+        ERROR.setAttribute("Visibility", "Visible");
+        ERROR.setAttribute("Content", "Graphic Script Error Occurred");
+        ERROR.setAttribute("FontFamily", "Arial");
+        ERROR.setAttribute("FontSize", "8");
+        ERROR.setAttribute("FontStyle", "Normal");
+        ERROR.setAttribute("FontWeight", "Bold");
+        ERROR.setAttribute("HorizontalAlign", "Center");
+        ERROR.setAttribute("TextDecoration", "None");
+        ERROR.setAttribute("VerticalAlign", "Middle");
+        ERROR.setAttribute("Left", "0");
+        ERROR.setAttribute("Top", "0");
+        ERROR.setAttribute("Height", component.getAttribute("Height"));
+        ERROR.setAttribute("Width", component.getAttribute("Width"));
+        ERROR.setAttribute("ContentHeight", component.getAttribute("Height"));
+        ERROR.setAttribute("ContentWidth", component.getAttribute("Width"));
+        component.appendChild(ERROR);
+        
+    } catch(err){
+        
+        //If an error happens within error handling, simply print the error to the console
+        console.log("Error in handling " + err + " " + err.stack);
+    }
+
+}
+
+//Filters children of parent and returns child component if only 1 exists, or an array of children if multiple exist
+//nodeFilter(parent node, name of property, property value)
+function nodeFilter(cComp, attrName, attrValue){
+	try{
+		var returnArr = [];
+		var children = cComp.getChildNodes();
+		for (var i = 0; i < children.length; i++){
+			if (children.item([i]).hasAttribute(attrName)){
+				if (children.item([i]).getAttribute(attrName) == attrValue){
+					returnArr.push(children.item([i]));
+				}
+			}
+		}
+		if (returnArr.length == 1){
+			returnArr = returnArr[0];
+		}
+		return returnArr;
+	} catch(err){
+		handleError(err);
+	}
+}
+
+//Returns boolean 1 or 0 based on if it matches a "true" state
+function getBool(check){
+    try{
+        switch(String(check).toLowerCase()){
+            case "true": case "1": case "active": case "t": case "a":
+                return 1;
+            default:
+                return 0;
+        }
+    } catch(err){
+        handleError(err);
+    }
+}]]><Bind
+                Attribute="ToolTipBind" Id="ToolTipBind" Name="Value">
+                <Expose ExposedAttribute="Name" Name="Bind Value"/>
+            </Bind>
+            <Expose ExposedAttribute="ToolTipText" Name="ToolTip Text"/>
+            <Expose ExposedAttribute="ToolTipFontSize" Name="ToolTip Font Size"/>
+            <Expose ExposedAttribute="ToolTipStroke" Name="ToolTip Font Stroke"/>
+            <Expose ExposedAttribute="ToolTipFill" Name="ToolTip Fill"/>
+        </Script>
+        <Metadata Author="Kevin Flathers" Id="Version Info"
+            ReleaseDate="06/12/2017" Version="2.0 - Suede"/>
+    </Component>
+</Tgml>
