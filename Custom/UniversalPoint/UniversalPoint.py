@@ -56,5 +56,6 @@ class UniversalPoint(Tgml):
 	}
 	SUPPORTED_CHILDREN = {}
 
-	def __init__(self, , input_type='child', **kwargs):
-		super(Table, self).__init__(*args, input_type, **kwargs)
+	def __init__(self):
+		super().read_tgml_file('./UniversalPoint.tgml')
+		self.element = self.element[0]

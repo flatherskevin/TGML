@@ -9,113 +9,149 @@ Version 0.1 Initial release
 	#Animate
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#AnimatedImage
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Arc
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Bind
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Chord
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Component
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#ConvertCustom
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#ConvertRange
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#ConvertStatus
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#ConvertText
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#ConvertValue
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Curve
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Ellipse
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Errors
 		+	06/05/2017 added errors.py to GitHub
 	#Expose
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#GradientStop
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Group
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Image
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Layer
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Line
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#LinearGradient
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Link
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Metadata
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Path
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Pie
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Polygon
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Polyline
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#RadialGradient
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Rectangle
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Rotate
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Scale
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Script
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#SkewX
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#SkewY
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#TargetArea
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Text
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#TextBox
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#Tgml Class
 		+	06/05/2017 added to GitHub
 		%	06/06/2017 changed check_file_contents() to validate_file()
@@ -133,7 +169,9 @@ Version 0.1 Initial release
 	#Translate
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
+		%	06/21/2017 fixed issue in super().__init__()
 	#UniversalPoint
 		+	06/20/2017 class added
+		%	06/21/2017 fixed issue in super().__init__()
 	#GitHub Collaborators
 		+	06/05/2017 added Donkey545

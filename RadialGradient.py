@@ -16,4 +16,4 @@ class RadialGradient(Tgml):
 	SUPPORTED_CHILDREN = {}
 
 	def __init__(self, *args, input_type='blank', **kwargs):
-		super(Table, self).__init__(*args, input_type, **kwargs)
+		super().__init__(*args, input_type, **kwargs)
