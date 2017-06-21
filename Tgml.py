@@ -10,7 +10,7 @@ Purpose:
 
 from lxml import etree
 from os.path import splitext
-from errors.py import *
+from .errors import *
 
 class Tgml:
 	properties = {
@@ -70,12 +70,12 @@ class Tgml:
 		
 		#obj_in is a tgml file
 		if input_type == 'file':
-			self.read_tgml_file(self.obj_in)
+			self.element = self.read_tgml_file(self.obj_in)
 		
 		#obj_in is the immediate child of the Tgml tag in a file
 		#Helps with creating objects from dependency files
 		elif input_type == 'child':
-			self.read_tgml_file(self.obj_in)
+			self.element = self.read_tgml_file(self.obj_in)
 			self.element = self.element[0]
 			
 		#obj_in is an etree.Element object
@@ -84,9 +84,12 @@ class Tgml:
 			
 		#obj_in is a string
 		elif input_type == 'blank':
-			self.element == etree.Element(obj_in)
+			self.element = etree.Element(obj_in)
 		else:
 			raise BadInputObject('Input type does not exist')
+
+	def __call__(self):
+		return self.element
 
 	#Fixes CDATA issue with all scripts under 'element'
 	def fix_scripts(self, element):
@@ -96,7 +99,7 @@ class Tgml:
 
 	#Set a value to all exposed attributes nested beneath an element
 	def set_exposed_properties(self, exposed_properties):
-		for key in exposed_properties.keys()
+		for key in exposed_properties.keys():
 			for item in self.element.xpath('.//*'):
 				expose = str(item.get('ExposedAttribute'))
 				if expose == key:
@@ -110,12 +113,8 @@ class Tgml:
 			self.set_properties(self.properties)
 			self.set_exposed_properties(self.exposed_properties)
 			self.fix_scripts()
-		except err:
+		except Exception as err:
 			print(err)
-
-	#Sets Tgml object properties
-	def set_properties(self):
-		raise NotImplementedError
 
 	#Transforms the Tgml object
 	def transform(self):
@@ -123,7 +122,7 @@ class Tgml:
 
 	#Sets Tgml properties
 	#Takes in a dictionary
-	def set_properties()(self, properties):
+	def set_properties(self, properties):
 		for key in properties.keys():
 			self.element.set(key, properties[key])
 
