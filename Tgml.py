@@ -9,6 +9,7 @@ Purpose:
 """
 
 from lxml import etree
+import os
 from os.path import splitext
 from .errors import *
 
@@ -92,10 +93,11 @@ class Tgml:
 		return self.element
 
 	#Fixes CDATA issue with all scripts under 'element'
-	def fix_scripts(self, element):
-		for script in element.xpath('.//Script'):
-			if '<![CDATA[' not in str(script):
-				script.text = etree.CDATA(script.text)
+	def fix_scripts(self):
+		for script in self.element.xpath('.//Script'):
+			#print(str(script))
+			#if '<![CDATA[' not in str(script):
+			script.text = etree.CDATA(script.text)
 
 	#Set a value to all exposed attributes nested beneath an element
 	def set_exposed_properties(self, exposed_properties):
@@ -133,40 +135,38 @@ class Tgml:
 
 	#Return etree object from file
 	def read_from_file(self, file):
-		with open(highLight_Script_PATH, 'r') as file:
-			if(validate_file(file)):
-				return etree.fromstring(file.read())
+		with open(file, 'r') as file:
+			return etree.fromstring(file.read())
 
 	#Checks file for Tgml properties and returns etree object, or returns 0 if an error occurs
 	def read_tgml_file(self, file):
 		if(self.validate_file(file)):
-			self.element = self.prepare_element((self.read_from_file(file)))
+			self.element = self.read_from_file(file)
 		else:
 			self.element = etree.Element('Tgml')
 
 	#Writes content to a file
-	def write_to_file(self, content, directory, name):
+	def write_to_file(self, directory, name):
 		with open(os.path.join(directory, name + '.tgml'), 'w') as save_file:
-			save_file.write(content.decode('utf-8'))
+			save_file.write(etree.tostring(self.element).decode('utf-8'))
 
 	#Checks to see if a file is properly setup for use as a TGML
-	def validate_file(self, file, extension_check=True, tag_check=True):
+	def validate_file(self, file, extension_check=True, tag_check=False):
 		try:
 			if extension_check:
 				if(str(splitext(file)[1]) != '.tgml'):
 					raise BadTgmlFileError('File is not a .tgml file')
-			tree = self.read_from_file(file)
 			if tag_check:
-				if(str(tree.tag) == 'Tgml'):
-					return 1
-				else:
+				if(etree.tostring(self.element.tag) != 'Tgml'):
 					raise BadTGMLFileError('TGML file does not contain a <Tgml> or <Tgml/> tag at the beginning / end of the file')
-		except:
+			return 1
+		except Exception as err:
+			print(err)
 			return 0
 
 	#Checks that element contents are supported
-	def validate_element(self, children_check=True):
+	def validate_element(self, children_check=False):
 		if children_check:
 			for child in self.element.xpath('./*'):
-				if child.tag not in SUPPORTED_CHILDREN:
-					raise BadElementChilderror('Element does not support this child: ' + str(child.tag))
+				if child.tag not in self.SUPPORTED_CHILDREN:
+					raise BadElementChildError('Element does not support this child: ' + str(child.tag))

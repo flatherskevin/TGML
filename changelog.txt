@@ -6,6 +6,9 @@ Authors: Kevin Flathers, Dominic Lopriore
 %	Changed
 
 Version 0.1 Initial release
+	#General
+		%	06/23/2017 fixed relative importing
+		%	06/23/2107 all modules now can properly use Tgml imports
 	#Animate
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
@@ -167,6 +170,7 @@ Version 0.1 Initial release
 		%	06/19/2017 fixed set_properties() and set_exposed_properties() in how properties are actually set
 		%	06/19/2017 added functions to happen when compile() is called
 		%	06/21/2017 fixed syntax issues
+		%	06/23/2017 fixed multitude of issues with Tgml file reading and validation
 	#Translate
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
@@ -174,5 +178,6 @@ Version 0.1 Initial release
 	#UniversalPoint
 		+	06/20/2017 class added
 		%	06/21/2017 fixed issue in super().__init__()
+		%	06/23/2017 fixed all creation issues
 	#GitHub Collaborators
 		+	06/05/2017 added Donkey545

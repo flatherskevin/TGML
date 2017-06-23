@@ -8,7 +8,7 @@ Date Created: 05/27/2017
 Purpose:
 """
 
-from .Tgml import Tgml
+from .Tgml import *
 
 class Metadata(Tgml):
 	properties = {}

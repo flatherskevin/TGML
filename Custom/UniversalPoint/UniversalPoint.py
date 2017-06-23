@@ -8,7 +8,7 @@ Date Created: 05/27/2017
 Purpose:
 """
 
-from .Tgml import Tgml
+from ...Tgml import *
 
 class UniversalPoint(Tgml):
 	properties = {
@@ -24,7 +24,7 @@ class UniversalPoint(Tgml):
 		'Height': '20',
 		'Width': '125'
 	}
-	exposed_properties{
+	exposed_properties = {
 		'Point Bind': 'Universal',
 		'Point Type': 'Analog',
 		'Bind Value': 'Value',
@@ -57,5 +57,5 @@ class UniversalPoint(Tgml):
 	SUPPORTED_CHILDREN = {}
 
 	def __init__(self):
-		super().read_tgml_file('./UniversalPoint.tgml')
+		super().read_tgml_file(os.path.join(os.path.dirname(__file__), 'UniversalPoint.tgml'))
 		self.element = self.element[0]
