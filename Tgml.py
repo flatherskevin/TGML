@@ -103,8 +103,8 @@ class Tgml:
 	def set_exposed_properties(self, exposed_properties):
 		for key in exposed_properties.keys():
 			for item in self.element.xpath('.//*'):
-				if item.get('ExposedAttribute') != "":
-					expose = str(item.get('Name')).replace(" ", "")
+				if item.get('ExposedAttribute') != '':
+					expose = str(item.get('Name')).replace(' ', '')
 				if expose == key:
 					item.getparent().set(item.get('ExposedAttribute'), exposed_properties[key])
 
