@@ -25,21 +25,21 @@ class UniversalPoint(Tgml):
 		'Width': '125'
 	}
 	exposed_properties = {
-		'Point Bind': 'Universal',
-		'Point Type': 'Analog',
-		'Bind Value': 'Value',
-		'Bind Alarm': 'Alarm',
+		'PointBind': 'Universal',
+		'PointType': 'Analog',
+		'BindValue': 'Value',
+		'BindAlarm': 'Alarm',
 		'Units': '',
 		'Decimals': '1',
-		'Digital Off': 'Off',
-		'Digital On': 'On',
+		'DigitalOff': 'Off',
+		'DigitalOn': 'On',
 		'Multistate Text': '',
 		'Viconics': 'False',
-		'Analog Conversion': 'False',
-		'Conversion Input Min': '0',
-		'Conversion Input Max': '10',
-		'Conversion Output Min': '0',
-		'Conversion Output Max': '100'
+		'AnalogConversion': 'False',
+		'ConversionInputMin': '0',
+		'ConversionInputMax': '10',
+		'ConversionOutputMin': '0',
+		'ConversionOutputMax': '100'
 	}
 	DEFAULT_PROPERTIES = {
 		'Id': 'UP',

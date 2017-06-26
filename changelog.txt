@@ -179,5 +179,6 @@ Version 0.1 Initial release
 		+	06/20/2017 class added
 		%	06/21/2017 fixed issue in super().__init__()
 		%	06/23/2017 fixed all creation issues
+		%	06/26/2017 exposed_properties keys should not have spaces
 	#GitHub Collaborators
 		+	06/05/2017 added Donkey545
