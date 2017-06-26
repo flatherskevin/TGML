@@ -13,7 +13,7 @@ from ...Tgml import *
 class UniversalPoint(Tgml):
 	properties = {
 		'Id': 'UP',
-		'Name': 'Universal',
+		'Name': '',
 		'Opacity': '1.0',
 		'Visibility': 'Visible',
 		'Clip': 'False',
