@@ -181,5 +181,8 @@ Version 0.1 Initial release
 		%	06/21/2017 fixed issue in super().__init__()
 		%	06/23/2017 fixed all creation issues
 		%	06/26/2017 exposed_properties keys should not have spaces
+		%	06/26/2017 added exposed attributes to match component
+	#UniversalPoint - Syles - Standard
+		+	06/26/2017 added to library
 	#GitHub Collaborators
 		+	06/05/2017 added Donkey545
