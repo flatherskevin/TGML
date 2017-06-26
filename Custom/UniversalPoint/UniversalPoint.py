@@ -1,6 +1,6 @@
 """
 Last Edited By: Kevin Flathers
-Date Las Edited: 06/07/2017
+Date Las Edited: 06/26/2017
 
 Author: Kevin Flathers
 Date Created: 05/27/2017
@@ -33,7 +33,7 @@ class UniversalPoint(Tgml):
 		'Decimals': '1',
 		'DigitalOff': 'Off',
 		'DigitalOn': 'On',
-		'Multistate Text': '',
+		'MultistateText': '',
 		'Viconics': 'False',
 		'AnalogConversion': 'False',
 		'ConversionInputMin': '0',

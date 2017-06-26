@@ -1,6 +1,6 @@
 """
 Last Edited By: Kevin Flathers
-Date Las Edited: 06/07/2017
+Date Last Edited: 06/26/2017
 
 Author: Kevin Flathers
 Date Created: 05/27/2017
@@ -103,9 +103,10 @@ class Tgml:
 	def set_exposed_properties(self, exposed_properties):
 		for key in exposed_properties.keys():
 			for item in self.element.xpath('.//*'):
-				expose = str(item.get('ExposedAttribute'))
+				if item.get('ExposedAttribute') != "":
+					expose = str(item.get('Name')).replace(" ", "")
 				if expose == key:
-					item.getparent().set(key, exposed_properties[key])
+					item.getparent().set(item.get('ExposedAttribute'), exposed_properties[key])
 
 	#Compiles the Tgml object
 	def compile(self, validate_element=True):
