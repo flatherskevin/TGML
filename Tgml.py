@@ -93,11 +93,19 @@ class Tgml:
 		return self.element
 
 	#Fixes CDATA issue with all scripts under 'element'
-	def fix_scripts(self):
+	def fix_cdata(self):
 		for script in self.element.xpath('.//Script'):
-			#print(str(script))
-			#if '<![CDATA[' not in str(script):
 			script.text = etree.CDATA(script.text)
+		for text in self.element.xpath('.//Text'):
+			if text.properties['Content'] in ['', None]:
+				text.text = etree.CDATA(text.properties['Content'])
+			else:
+				text.text = etree.CDATA(text.text)
+		for text_box in self.element.xpath('.//TextBox'):
+			if text_box.properties['Content'] in ['', None]:
+				text_box.text = etree.CDATA(text_box.properties['Content'])
+			else:
+				text_box.text = etree.CDATA(text_box.text)
 
 	#Set a value to all exposed attributes nested beneath an element
 	def set_exposed_properties(self, exposed_properties):
@@ -115,7 +123,7 @@ class Tgml:
 				self.validate_element()
 			self.set_properties(self.properties)
 			self.set_exposed_properties(self.exposed_properties)
-			self.fix_scripts()
+			self.fix_cdata()
 		except Exception as err:
 			print(err)
 
