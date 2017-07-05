@@ -97,15 +97,17 @@ class Tgml:
 		for script in self.element.xpath('.//Script'):
 			script.text = etree.CDATA(script.text)
 		for text in self.element.xpath('.//Text'):
-			if text.properties['Content'] in ['', None]:
-				text.text = etree.CDATA(text.properties['Content'])
+			if text.get('Content') not in ['', None]:
+				text.text = etree.CDATA(text.get('Content'))
 			else:
 				text.text = etree.CDATA(text.text)
+			etree.strip_attributes(text, 'Content')
 		for text_box in self.element.xpath('.//TextBox'):
-			if text_box.properties['Content'] in ['', None]:
-				text_box.text = etree.CDATA(text_box.properties['Content'])
+			if text_box.get('Content') not in ['', None]:
+				text_box.text = etree.CDATA(text_box.get('Content'))
 			else:
 				text_box.text = etree.CDATA(text_box.text)
+			etree.strip_attributes(text_box, 'Content')
 
 	#Set a value to all exposed attributes nested beneath an element
 	def set_exposed_properties(self, exposed_properties):
