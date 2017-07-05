@@ -110,7 +110,6 @@ class Tgml:
 		for text_box in self.element.xpath('.//TextBox'):
 			if text_box.get('Content') not in ['', None]:
 				content = text_box.get('Content')
-				#text_box.text = etree.CDATA(text_box.get('Content'))
 			else:
 				if str(text_box.text).isspace():
 					content = ''
@@ -147,12 +146,12 @@ class Tgml:
 	#Takes in a dictionary
 	def set_properties(self, properties):
 		for key in properties.keys():
-			self.element.set(key, properties[key])
+			self.checkset_property(key, properties[key])
 
 	#Check if property is set to a value, then set it to a new value
-	def checkset_property(self, element, attribute, value, value_check='None'):
-		if(str(element.get(attribute)) == value_check):
-			element.set(attribute, value)
+	def checkset_property(self, attribute, value, value_check=[None,'','None']):
+		if(str(self.element.get(attribute)) in value_check):
+			self.element.set(attribute, value)
 
 	#Return etree object from file
 	def read_from_file(self, file):
