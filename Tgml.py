@@ -71,7 +71,7 @@ class Tgml:
 		
 		#obj_in is a tgml file
 		if input_type == 'file':
-			self.element = self.read_tgml_file(self.obj_in)
+			self.read_tgml_file(self.obj_in)
 		
 		#obj_in is the immediate child of the Tgml tag in a file
 		#Helps with creating objects from dependency files
