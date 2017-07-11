@@ -67,3 +67,19 @@ class Standard(UniversalPoint):
 			'ToolTipFill': '#E0E0E0',
 			'ToolTipEnable': 'False'
 		}
+
+	@property
+	def properties(self):
+		return self.__properties
+
+	@properties.setter
+	def properties(self, value):
+		self.__properties = value
+
+	@property
+	def exposed_properties(self):
+		return self.__properties
+
+	@exposed_properties.setter
+	def exposed_properties(self, value):
+		self.exposed_properties = value

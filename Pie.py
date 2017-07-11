@@ -19,3 +19,19 @@ class Pie(Tgml):
 		super().__init__(*args, input_type, **kwargs)
 		self.__properties = {}
 		self.__exposed_properties = {}
+
+	@property
+	def properties(self):
+		return self.__properties
+
+	@properties.setter
+	def properties(self, value):
+		self.__properties = value
+
+	@property
+	def exposed_properties(self):
+		return self.__properties
+
+	@exposed_properties.setter
+	def exposed_properties(self, value):
+		self.exposed_properties = value
