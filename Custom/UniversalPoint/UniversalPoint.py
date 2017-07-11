@@ -11,42 +11,7 @@ Purpose:
 from ...Tgml import *
 
 class UniversalPoint(Tgml):
-	properties = {
-		'Id': 'UP',
-		'Name': '',
-		'Opacity': '1.0',
-		'Visibility': 'Visible',
-		'Clip': 'False',
-		'ContentHeight': '20',
-		'ContentWidth': '125',
-		'Left': '0.0',
-		'Top': '0.0',
-		'Height': '20',
-		'Width': '125'
-	}
-	exposed_properties = {
-		'PointBind': 'Universal',
-		'PointType': 'Analog',
-		'BindValue': 'Value',
-		'BindAlarm': 'Alarm',
-		'Units': '',
-		'Decimals': '1',
-		'DigitalOff': 'Off',
-		'DigitalOn': 'On',
-		'MultistateText': '',
-		'Viconics': 'False',
-		'AnalogConversion': 'False',
-		'ConversionInputMin': '0',
-		'ConversionInputMax': '10',
-		'ConversionOutputMin': '0',
-		'ConversionOutputMax': '100',
-		'Text Align': 'Center',
-		'ToolTipText': '',
-		'ToolTipFontSize': '48',
-		'ToolTipFontStroke': '#404040',
-		'ToolTipFill': '#E0E0E0',
-		'ToolTipEnable': 'False'
-	}
+	
 	DEFAULT_PROPERTIES = {
 		'Id': 'UP',
 		'Name': 'Universal',
@@ -65,3 +30,39 @@ class UniversalPoint(Tgml):
 	def __init__(self):
 		super().read_tgml_file(os.path.join(os.path.dirname(__file__), 'UniversalPoint.tgml'))
 		self.element = self.element[0]
+		self.__properties = {
+			'Id': 'UP',
+			'Name': '',
+			'Opacity': '1.0',
+			'Visibility': 'Visible',
+			'Clip': 'False',
+			'ContentHeight': '20',
+			'ContentWidth': '125',
+			'Left': '0.0',
+			'Top': '0.0',
+			'Height': '20',
+			'Width': '125'
+		}
+		self.__exposed_properties = {
+			'PointBind': 'Universal',
+			'PointType': 'Analog',
+			'BindValue': 'Value',
+			'BindAlarm': 'Alarm',
+			'Units': '',
+			'Decimals': '1',
+			'DigitalOff': 'Off',
+			'DigitalOn': 'On',
+			'MultistateText': '',
+			'Viconics': 'False',
+			'AnalogConversion': 'False',
+			'ConversionInputMin': '0',
+			'ConversionInputMax': '10',
+			'ConversionOutputMin': '0',
+			'ConversionOutputMax': '100',
+			'Text Align': 'Center',
+			'ToolTipText': '',
+			'ToolTipFontSize': '48',
+			'ToolTipFontStroke': '#404040',
+			'ToolTipFill': '#E0E0E0',
+			'ToolTipEnable': 'False'
+		}
