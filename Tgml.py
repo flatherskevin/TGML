@@ -14,19 +14,6 @@ from os.path import splitext
 from .errors import *
 
 class Tgml:
-	properties = {
-		'Id': '',
-		'Name': '',
-		'Background': '#FFFFFF',
-		'Stretch': 'Uniform',
-		'UseGlobalScripts': 'False',
-		'DisablePanAndZoom': 'False',
-		'GridSize': '10',
-		'Height': '600',
-		'Width': '800'
-	}
-
-	exposed_properties = {}
 	
 	DEFAULT_PROPERTIES = {
 		'Id': '',
@@ -89,6 +76,36 @@ class Tgml:
 		else:
 			raise BadInputObject('Input type does not exist')
 
+		self.__properties = {
+			'Id': '',
+			'Name': '',
+			'Background': '#FFFFFF',
+			'Stretch': 'Uniform',
+			'UseGlobalScripts': 'False',
+			'DisablePanAndZoom': 'False',
+			'GridSize': '10',
+			'Height': '600',
+			'Width': '800'
+		}
+
+		self.__exposed_properties = {}
+
+	@property
+	def properties(self):
+		return self.__properties
+
+	@properties.setter
+	def properties(self, value)
+		self.__properties = value
+
+	@property
+	def __exposed_properties(self):
+		return self.__properties
+
+	@exposed_properties.setter
+	def exposed_properties(self, value)
+		self.exposed_properties = value
+
 	def __call__(self):
 		return self.element
 
@@ -146,7 +163,7 @@ class Tgml:
 	#Takes in a dictionary
 	def set_properties(self, properties):
 		for key in properties.keys():
-			self.checkset_property(key, properties[key])
+			self.element.set(key, properties[key])
 
 	#Check if property is set to a value, then set it to a new value
 	def checkset_property(self, attribute, value, value_check=[None,'','None']):
