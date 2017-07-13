@@ -95,15 +95,15 @@ class Tgml:
 		return self.__properties
 
 	@properties.setter
-	def properties(self, value)
+	def properties(self, value):
 		self.__properties = value
 
 	@property
-	def __exposed_properties(self):
+	def exposed_properties(self):
 		return self.__properties
 
 	@exposed_properties.setter
-	def exposed_properties(self, value)
+	def exposed_properties(self, value):
 		self.exposed_properties = value
 
 	def __call__(self):

@@ -10,7 +10,7 @@ Purpose:
 
 from ..UniversalPoint import *
 
-class Standard(UniversalPoint):
+class MITSubtitle(UniversalPoint):
 
 	DEFAULT_PROPERTIES = {
 		'Id': 'UP',
@@ -28,7 +28,7 @@ class Standard(UniversalPoint):
 	SUPPORTED_CHILDREN = {}
 
 	def __init__(self):
-		super().read_tgml_file(os.path.join(os.path.dirname(__file__), 'Standard.tgml'))
+		super().read_tgml_file(os.path.join(os.path.dirname(__file__), 'MITSubtitle.tgml'))
 		self.element = self.element[0]
 		self.__properties = {
 			'Id': 'UP',
@@ -44,7 +44,6 @@ class Standard(UniversalPoint):
 			'Width': '125'
 		}
 		self.__exposed_properties = {
-			'Title': '',
 			'Subtitle': '',
 			'PointBind': 'Universal',
 			'PointType': 'Analog',
