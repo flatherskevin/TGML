@@ -5,7 +5,7 @@ Date Last Edited: 06/26/2017
 Author: Kevin Flathers
 Date Created: 05/27/2017
 
-Purpose:
+Purpose: 
 """
 
 from lxml import etree
