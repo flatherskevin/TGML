@@ -28,7 +28,7 @@ class UniversalPoint(Tgml):
 	SUPPORTED_CHILDREN = {}
 
 	def __init__(self):
-		super().read_from_tgml(os.path.join(os.path.dirname(__file__), 'Universal.tgml'))
+		super().read_tgml_file(os.path.join(os.path.dirname(__file__), 'Universal.tgml'))
 		self.element = self.element[0]
 		self.__properties = {
 			'Id': 'UP',

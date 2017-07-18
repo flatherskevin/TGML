@@ -28,7 +28,7 @@ class MITTitle(UniversalPoint):
 	SUPPORTED_CHILDREN = {}
 
 	def __init__(self):
-		super().read_from_tgml(os.path.join(os.path.dirname(__file__), 'MITTitle.tgml'))
+		super().read_tgml_file(os.path.join(os.path.dirname(__file__), 'MITTitle.tgml'))
 		self.element = self.element[0]
 		self.__properties = {
 			'Id': 'UP',
