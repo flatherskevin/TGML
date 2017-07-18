@@ -16,7 +16,7 @@ class Rotate(Tgml):
 	SUPPORTED_CHILDREN = {}
 
 	def __init__(self, *args, input_type='blank', **kwargs):
-		super().__init__(*args, input_type, **kwargs)
+		super().__init__(*args, input_type=input_type, **kwargs)
 		self.__properties = {}
 		self.__exposed_properties = {}
 

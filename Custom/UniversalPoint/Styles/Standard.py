@@ -27,8 +27,8 @@ class Standard(UniversalPoint):
 	}
 	SUPPORTED_CHILDREN = {}
 
-	def __init__(self):
-		super().read_tgml_file(os.path.join(os.path.dirname(__file__), 'Standard.tgml'))
+	def __init__(self, obj_in=os.path.join(os.path.dirname(__file__), 'Standard.tgml'), input_type='file'):
+		super().__init__(obj_in, input_type=input_type, **kwargs)
 		self.element = self.element[0]
 		self.__properties = {
 			'Id': 'UP',

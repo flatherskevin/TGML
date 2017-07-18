@@ -1,4 +1,5 @@
-Authors: Kevin Flathers, Dominic Lopriore
+Authors: Kevin Flathers
+
 
 #	Subject
 +	Added
@@ -10,6 +11,7 @@ Version 0.1 Initial release
 		%	06/23/2017 fixed relative importing
 		%	06/23/2107 all modules now can properly use Tgml imports
 		%	07/11/2017 fixed object instances with properties and exposed properties
+		%	07/18/2017 fixed super().__init__() on subclasses
 	#Animate
 		+	06/07/2017 class added
 		%	06/09/2017 __init__() changed for proper inheritance
@@ -187,7 +189,12 @@ Version 0.1 Initial release
 		%	06/23/2017 fixed all creation issues
 		%	06/26/2017 exposed_properties keys should not have spaces
 		%	06/26/2017 added exposed attributes to match component
+		%	07/18/2017 __init__() uses proper inheritance now rather than direct method call of read_tgml()
 	#UniversalPoint - Syles - Standard
-		+	06/26/2017 added to library
+		+	07/18/2017 added to library
+	#UniversalPoint - Syles - MITTitle
+		+	07/18/2017 added to library
+	#UniversalPoint - Syles - MITSubtitle
+		+	07/18/2017 added to library
 	#GitHub Collaborators
 		+	06/05/2017 added Donkey545
