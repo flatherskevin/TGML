@@ -190,6 +190,7 @@ Version 0.1 Initial release
 		%	06/26/2017 exposed_properties keys should not have spaces
 		%	06/26/2017 added exposed attributes to match component
 		%	07/18/2017 __init__() uses proper inheritance now rather than direct method call of read_tgml()
+		%	07/18/2017 reverted __init__() change
 	#UniversalPoint - Syles - Standard
 		+	07/18/2017 added to library
 	#UniversalPoint - Syles - MITTitle

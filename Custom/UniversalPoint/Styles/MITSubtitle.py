@@ -27,8 +27,8 @@ class MITSubtitle(UniversalPoint):
 	}
 	SUPPORTED_CHILDREN = {}
 
-	def __init__(self, obj_in=os.path.join(os.path.dirname(__file__), 'MITSubtitle.tgml'), input_type='file'):
-		super().__init__(obj_in, input_type=input_type, **kwargs)
+	def __init__(self):
+		super().read_from_tgml(os.path.join(os.path.dirname(__file__), 'MITSubtitle.tgml'))
 		self.element = self.element[0]
 		self.__properties = {
 			'Id': 'UP',
