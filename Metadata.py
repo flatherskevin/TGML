@@ -8,6 +8,7 @@ Date Created: 05/27/2017
 Purpose:
 """
 
+import datetime
 from .Tgml import *
 
 class Metadata(Tgml):
@@ -17,7 +18,11 @@ class Metadata(Tgml):
 
 	def __init__(self, *args, input_type='blank', **kwargs):
 		super().__init__(*args, input_type=input_type, **kwargs)
-		self.__properties = {}
+		self.__properties = {
+			'Id': '',
+			'Name': '',
+			'Value': ''
+		}
 		self.__exposed_properties = {}
 
 	@property
@@ -35,3 +40,8 @@ class Metadata(Tgml):
 	@exposed_properties.setter
 	def exposed_properties(self, value):
 		self.exposed_properties = value
+
+	def version_tag(self, name, version):
+		self.__properties['Name'] = 'Creation Info'
+		date = datetime.datetime.now().strftime('%B %d, %Y')
+		self.__properties['Value'] = 'Created on {date} using {name} - {version}'.format(name=name, version=version, date=date)
