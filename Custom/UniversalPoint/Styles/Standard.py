@@ -48,8 +48,6 @@ class Standard(UniversalPoint):
 			'Subtitle': '',
 			'PointBind': 'Universal',
 			'PointType': 'Analog',
-			'BindValue': 'Value',
-			'BindAlarm': 'Alarm',
 			'Units': '',
 			'Decimals': '1',
 			'DigitalOff': 'Off',
@@ -61,11 +59,7 @@ class Standard(UniversalPoint):
 			'ConversionInputMax': '10',
 			'ConversionOutputMin': '0',
 			'ConversionOutputMax': '100',
-			'Text Align': 'Center',
 			'ToolTipText': '',
-			'ToolTipFontSize': '48',
-			'ToolTipFontStroke': '#404040',
-			'ToolTipFill': '#E0E0E0',
 			'ToolTipEnable': 'False'
 		}
 
