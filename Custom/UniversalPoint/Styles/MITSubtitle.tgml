@@ -2,47 +2,53 @@
 
 <!--[DocumentInformation]
 Created: 2017-07-11 10:14
-Modified: 2017-07-11 10:15
+Modified: 2017-09-11 14:19
 -->
-<?tgml version="1.3"?><Tgml Background="#1A1A1A" ComponentCounter="3" GridSize="5">
+<?tgml version="1.3"?><Tgml Background="#1A1A1A" ComponentCounter="4" GridSize="5">
     <Component AnalogConversion="False" Clip="False" ContentHeight="20"
         ContentWidth="125" ConversionInputMax="10"
         ConversionInputMin="0" ConversionOutputMax="100"
         ConversionOutputMin="0" Decimals="1" DigitalOff="Off"
-        DigitalOn="On" Height="20.0" Id="UP v2.0" Left="0"
-        Name="Universal Subtitle" PointType="Analog" StateTextInput=""
+        DigitalOn="On" Height="20.0" Id="UP v3.0" Left="0"
+        Name="UP v3.0 - Subtitle" PointType="Analog" StateTextInput=""
+        SystemThemeEnable="True"
+        SystemThemeRules="ToolTipEnable:UP_TOOLTIP_ENABLE"
         ToolTipEnable="False" ToolTipFill="#E0E0E0" ToolTipFontSize="48"
         ToolTipStroke="#404040" ToolTipText="" Top="0" Units=""
         Viconics="False" Width="125.0">
         <Text FontFamily="Arial" FontSize="15.0" FontStyle="Normal"
-            FontWeight="Bold" HorizontalAlign="Right" Left="-5"
-            Opacity="1.0" Stroke="#FFFFFF" TextDecoration="None"
+            FontWeight="Normal" HorizontalAlign="Right" Left="-5"
+            Opacity="1" Stroke="#FFFFFF" SystemThemeEnable="True"
+            SystemThemeRules="Stroke:UP_TITLES" TextDecoration="None"
             Top="10" VerticalAlign="Middle">
-            <Expose ExposedAttribute="Content" Name="Subtitle"/><![CDATA[]]></Text>
+            <Expose ExposedAttribute="Content" Name="Subtitle"/>
+        </Text>
         <Expose ExposedAttribute="Name" Name="Point Bind"/>
         <Expose ExposedAttribute="PointType" Name="Point Type"/>
         <Rectangle Fill="#FFFFFF" Height="20" Id="" Left="0.0"
             Opacity="1.0" RadiusX="5" RadiusY="5" Stroke="#626469"
-            StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="125">
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            SystemThemeEnable="True" SystemThemeRules="Stroke:UP_BORDER"
+            Top="0.0" Width="125">
             <LinearGradient EndPoint="0,1">
-                <GradientStop Color="#FEFEFE" Offset="0"/>
-                <GradientStop Color="#DFE0E2" Offset="1.0"/>
+                <GradientStop Color="#FEFEFE" Offset="0"
+                    SystemThemeEnable="True" SystemThemeRules="Color:UP_GRADIENT"/>
+                <GradientStop Color="#DFE0E2" Offset="1.0"
+                    SystemThemeEnable="True" SystemThemeRules="Color:UP_FILL"/>
             </LinearGradient>
         </Rectangle>
         <Rectangle Fill="None" Height="20" Id="Background" Left="0.0"
             Opacity="1.0" RadiusX="5" RadiusY="5" Stroke="None"
-            StrokeDashArray="0.0" StrokeWidth="1.0" Top="0.0" Width="125"/>
+            StrokeDashArray="0.0" StrokeWidth="1.0"
+            SystemThemeEnable="False" SystemThemeRules="" Top="0.0" Width="125"/>
         <Bind Attribute="Priority" Id="Priority" Name="ActiveCommandPriority"/>
         <Bind Attribute="OOS" Id="OutOfService" Name="OutOfService"/>
         <Bind Attribute="State" Id="State" Name="State"/>
         <Bind Attribute="StateText" Id="StateText" Name="StateText"/>
         <Bind Attribute="RelinquishDefault" Id="RelinquishDefault" Name="RelinquishDefault"/>
-        <Bind Attribute="Value" Id="Value" Name="Value">
-            <Expose ExposedAttribute="Name" Name="Bind Value"/>
-        </Bind>
-        <Bind Attribute="Aarm" Id="Alarm" Name="Alarm">
-            <Expose ExposedAttribute="Name" Name="Bind Alarm"/>
-        </Bind>
+        <Bind Attribute="RequestedValue" Id="RequestedValue" Name="RequestedValue"/>
+        <Bind Attribute="Value" Id="Value" Name="Value"/>
+        <Bind Attribute="Aarm" Id="Alarm" Name="Alarm"/>
         <Expose ExposedAttribute="Units" Name="Units"/>
         <Expose ExposedAttribute="Decimals" Name="Decimals"/>
         <Expose ExposedAttribute="DigitalOff" Name="Digital Off"/>
@@ -57,15 +63,11 @@ Modified: 2017-07-11 10:15
         <TextBox FontFamily="Arial" FontSize="15" FontStyle="Normal"
             FontWeight="Normal" Height="20" HorizontalAlign="Center"
             Id="Textbox" Left="0.0" Opacity="1.0" Stroke="#000000"
-            TextDecoration="None" Top="0.0" VerticalAlign="Middle"
-                Width="125"><![CDATA[Universal v2.0]]><Expose
-                ExposedAttribute="HorizontalAlign" Name="Text Align"/>
-        </TextBox>
-        <Expose ExposedAttribute="ToolTipText" Name="ToolTip Text"/>
-        <Expose ExposedAttribute="ToolTipFontSize" Name="ToolTip Font Size"/>
-        <Expose ExposedAttribute="ToolTipStroke" Name="ToolTip Font Stroke"/>
-        <Expose ExposedAttribute="ToolTipFill" Name="ToolTip Fill"/>
+            SystemThemeEnable="True"
+            SystemThemeRules="Stroke:UP_VALUE;HorizontalAlign:UP_HORIZONTALALIGN"
+            TextDecoration="None" Top="0.0" VerticalAlign="Middle" Width="125"><![CDATA[Universal v3.0]]></TextBox>
         <Expose ExposedAttribute="ToolTipEnable" Name="Tool Tip Enable"/>
+        <Expose ExposedAttribute="ToolTipText" Name="ToolTip Text"/>
         <Component Clip="False" ContentHeight="20.0" ContentWidth="20.0"
             Height="20.0" Id="LockoutImage" Left="105" Top="0"
             Visibility="Hidden" Width="20.0">
@@ -102,10 +104,7 @@ Modified: 2017-07-11 10:15
             Height="20.0" Id="ForceImage" Left="105.0" Top="0.0"
             Visibility="Hidden" Width="20.0">
             <Rectangle Fill="#FFD100" Height="20.0" Left="0.0"
-                RadiusX="5" RadiusY="5" Stroke="None" Top="0.0" Width="20.0">
-                <Animate Animation="Stop" Attribute="Fill" Duration="1"
-                    From="#FFD100" To="#FFD100"/>
-            </Rectangle>
+                RadiusX="5" RadiusY="5" Stroke="None" Top="0.0" Width="20.0"/>
             <Component Clip="False" ContentHeight="10.1"
                 ContentWidth="15.0" Height="10.100000000000001" Left="4"
                 Top="5.0" Width="15.0">
@@ -124,17 +123,57 @@ Modified: 2017-07-11 10:15
                 </Path>
             </Component>
         </Component>
-        <Script Id="UniversalPointScript" Name="UniveralPoint_2.0-Suede"
+        <Component Clip="False" ContentHeight="20.0" ContentWidth="20.0"
+            Height="20.0" Id="NetworkImage" Left="105" Top="0"
+            Visibility="Hidden" Width="20.0">
+            <Rectangle Fill="#FF6000" Height="20.0" Left="0.0"
+                RadiusX="5" RadiusY="5" Stroke="#FF6000" Top="0.0" Width="20.0"/>
+            <Component Clip="False" ContentHeight="75.0"
+                ContentWidth="85.0" Height="13.235294446349144"
+                Left="2.5" Top="3.382352828979492" Width="15.0">
+                <Rectangle Fill="#FFD100" Height="5.0" Left="0.0"
+                    Opacity="1.0" RadiusX="0.0" RadiusY="0.0"
+                    Stroke="#FFD100" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="35.0" Width="85.0"/>
+                <Rectangle Fill="#FFD100" Height="10.0" Left="40.0"
+                    Opacity="1.0" RadiusX="0.0" RadiusY="0.0"
+                    Stroke="#FFD100" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="25.0" Width="5.0"/>
+                <Rectangle Fill="#FFD100" Height="10.0" Left="10.0"
+                    Opacity="1.0" RadiusX="0.0" RadiusY="0.0"
+                    Stroke="#FFD100" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="40.0" Width="5.0"/>
+                <Rectangle Fill="#FFD100" Height="10.0" Left="70.0"
+                    Opacity="1.0" RadiusX="0.0" RadiusY="0.0"
+                    Stroke="#FFD100" StrokeDashArray="0.0"
+                    StrokeWidth="1.0" Top="40.0" Width="5.0"/>
+                <Rectangle Fill="#AAEEFF" Height="25.0" Left="0.0"
+                    Opacity="1.0" RadiusX="3" RadiusY="3"
+                    Stroke="#292929" StrokeDashArray="0.0"
+                    StrokeWidth="3" Top="50.0" Width="25.0"/>
+                <Rectangle Fill="#AAEEFF" Height="25.0" Left="60.0"
+                    Opacity="1.0" RadiusX="3" RadiusY="3"
+                    Stroke="#292929" StrokeDashArray="0.0"
+                    StrokeWidth="3" Top="50.0" Width="25.0"/>
+                <Rectangle Fill="#AAEEFF" Height="25.0" Left="30.0"
+                    Opacity="1.0" RadiusX="3" RadiusY="3"
+                    Stroke="#292929" StrokeDashArray="0.0"
+                    StrokeWidth="3" Top="0.0" Width="25.0"/>
+            </Component>
+        </Component>
+        <Metadata Id="PriorityForcing" SystemThemeEnable="True"
+            SystemThemeRules="Value:UP_FORCING_PRIORITY" Value="8"/>
+        <Script Id="UniversalPointScript" Name="UniveralPoint v3.0"
             OnDocumentLoad="onDocumentLoad" OnMouseClick="onMouseClick"
             OnMouseDown="" OnMouseMove="" OnMouseOut="" OnMouseOver=""
             OnMouseUp="" OnSignalChange="onSignalChange"><![CDATA[/*  
     Universal Point
-    Version 2.0 - Suede
+    Version 3.0
     
     Author: Kevin Flathers
     Date Created: 04/12/2017
     Last Edited By: Kevin Flathers
-    Date Last Edited: 06/12/2017    
+    Date Last Edited: 09/11/2017    
 */
 
 try{
@@ -143,41 +182,66 @@ try{
     var SCRIPT_NAME = "UniversalPoint";
 
 
-    //Binds
+    //Value Binds
     var valueBind;
     var valueBindValue = null;
     var valueBindName;
+    var valueBindStatus;
+    
+    //AlarmBinds
     var alarmBind;
     var alarmBindValue = null;
     var alarmBindName;
+    var alarmBindStatus;
+    
+    //Priority Binds
     var priorityBind;
     var priorityBindValue = null;
     var priorityBindName;
+    var priorityMetaData;
+    var priorityMetaDataValue;
+    
+    //OutOfService Binds
     var oosBind;
     var oosBindValue = null;
     var oosBindName;
+    
+    //State Binds
     var stateBind;
     var stateBindValue = null;
     var stateBindName;
     var stateTextBind;
     var stateTextBindValue = null;
+    
+    //RelinquishDefault Binds
     var relinquishDefaultBind;
     var relinquishDefaultBindValue;
     var relinquishDefaultBindName;
     
-    //Forcing
+    //RequestedValues Binds
+    var requestedValueBind;
+    var requestedValueBindValue;
+    var requestedValueBindName;
+    
+    //Style - Forcing
     var forceState = 0;
     var forceStroke = "#FFD100";
     var forceStrokeWidth = 2;
     var forceImage;
     
-    //Locking Out - SE8000 Series
+    //Style - Locking Out - SE8000 Series
     var lockoutState = 0;
     var lockoutStroke = "#0060FF";
     var lockoutStrokeWidth = 2;
     var lockoutImage;
     
-    //Alarming
+    //Style - Network Issues
+    var networkState = 0;
+    var networkStroke = "#FF6000";
+    var networkStrokeWidth = 2;
+    var networkImage;
+    
+    //Style - Alarming
     var alarmState = 0;
     var alarmStroke = "#F0080E";
     var alarmFill = "#F0080E";
@@ -202,6 +266,7 @@ try{
     var conversionInputMax;
     var conversionOutputMin;
     var conversionOutputMax;
+    var extraSpace = "  ";
 
 } catch(err){
     console.log(err + " " + err.stack);
@@ -209,130 +274,257 @@ try{
 
 function onDocumentLoad(evt){
     try{
+        //Get UP
         component = evt.getCurrentTarget();
-        valueBind = nodeFilter(component, "Id", "Value");
-        alarmBind = nodeFilter(component, "Id", "Alarm");
-        priorityBind = nodeFilter(component, "Id", "Priority");
-        oosBind = nodeFilter(component, "Id", "OutOfService");
-        stateBind = nodeFilter(component, "Id", "State");
-        stateTextBind = nodeFilter(component, "Id", "StateText");
-        relinquishDefaultBind = nodeFilter(component, "Id", "RelinquishDefault");
-        viconics = component.getAttribute("Viconics");
-        analogConversion = component.getAttribute("AnalogConversion");
-        conversionInputMin = component.getAttribute("ConversionInputMin");
-        conversionInputMax = component.getAttribute("ConversionInputMax");
-        conversionOutputMin = component.getAttribute("ConversionOutputMin");
-        conversionOutputMax = component.getAttribute("ConversionOutputMax");
-        if(conversionInputMin == "" || conversionInputMin == null){
-            conversionInputMin = 0;
-        }
-        if(conversionInputMax == "" || conversionInputMax == null){
-            conversionInputMax = 10;
-        }
-        if(conversionOutputMin == "" || conversionOutputMin == null){
-            conversionOutputMin = 0;
-        }
-        if(conversionOutputMax == "" || conversionOutputMax == null){
-            conversionOutputMax = 100;
-        }
-        conversionInputMin = Number(conversionInputMin);
-        conversionInputMax = Number(conversionInputMax);
-        conversionOutputMin = Number(conversionOutputMin);
-        conversionOutputMax = Number(conversionOutputMax);
-        background = nodeFilter(component, "Id", "Background");
-        textbox = nodeFilter(component, "Id", "Textbox");
-        pointType = component.getAttribute("PointType");
-        forceImage = nodeFilter(component, "Id", "ForceImage");
-        lockoutImage = nodeFilter(component, "Id", "LockoutImage");
-        digitalOn = component.getAttribute("DigitalOn");
-        digitalOff = component.getAttribute("DigitalOff");
-        if(digitalOn == "" || digitalOn == null){
-            digitalOn = "Active";
-        }
-        if(digitalOff == "" || digitalOff == null){
-            digitalOff = "Inactive";
-        }
-        units = component.getAttribute("Units");
-        decimals = parseInt(component.getAttribute("Decimals"));
-        if(decimals == "" || decimals == null){
-            decimals = 0;
-        }
-        var stateTextArr = String(component.getAttribute("StateTextInput")).split(":");
-        for(var i = 0; i < stateTextArr.length; i++){
-            var arr = stateTextArr[i].split(",");
-            if(arr[1] == "" || arr[1] == null || typeof arr[1] == "undefined"){
-                arr[1] = String(arr[0]);
-            }
-            stateTextInput[arr[0]] = arr[1];
-        }
-        backgroundStroke = background.getAttribute("Stroke");
-        backgroundStrokeWidth = background.getAttribute("StrokeWidth");
-        backgroundFill = background.getAttribute("Fill");
-        textboxStroke = textbox.getAttribute("Stroke");
+        
+        //Run on document load
+        updateStyle();
+        
+        //Add event listener for SystemTheme
+        component.getOwnerDocument().addEventListener("ThemeEvent", function(e){updateStyle();}, false);
     } catch(err){
         handleError(err);
     }
 }
 
+function updateStyle(){
+    
+    //Get bind nodes
+    valueBind = nodeFilter(component, "Id", "Value");
+    alarmBind = nodeFilter(component, "Id", "Alarm");
+    priorityBind = nodeFilter(component, "Id", "Priority");
+    oosBind = nodeFilter(component, "Id", "OutOfService");
+    stateBind = nodeFilter(component, "Id", "State");
+    stateTextBind = nodeFilter(component, "Id", "StateText");
+    relinquishDefaultBind = nodeFilter(component, "Id", "RelinquishDefault");
+    requestedValueBind = nodeFilter(component, "Id", "RequestedValue");
+    
+    //Get forcing priority and handle null
+    priorityMetaData = nodeFilter(component, "Id", "PriorityForcing");
+    priorityMetaDataValue = Number(priorityMetaData.getAttribute("Value"));
+    
+    //Lots of caution should be placed around letting users define the priority
+    try{
+        if(priorityMetaDataValue == "" || priorityMetaDataValue == null){
+            priorityMetaDataValue = 8;
+        }
+        
+        //Priority must be an integer between 1 and 16
+        if(!(typeof priorityMetaDataValue === 'number' && (priorityMetaDataValue%1) === 0 && priorityMetaDataValue >= 1 && priorityMetaDataValue <= 16)){
+            priorityMetaDataValue = 8;
+        }
+    } catch(err){
+        priorityMetaDataValue = 8;
+    }
+    
+    //Get SE8000 series properties
+    viconics = component.getAttribute("Viconics");
+    analogConversion = component.getAttribute("AnalogConversion");
+    conversionInputMin = component.getAttribute("ConversionInputMin");
+    conversionInputMax = component.getAttribute("ConversionInputMax");
+    conversionOutputMin = component.getAttribute("ConversionOutputMin");
+    conversionOutputMax = component.getAttribute("ConversionOutputMax");
+    
+    //Handle null conversion properties
+    if(conversionInputMin == "" || conversionInputMin == null){
+        conversionInputMin = 0;
+    }
+    if(conversionInputMax == "" || conversionInputMax == null){
+        conversionInputMax = 10;
+    }
+    if(conversionOutputMin == "" || conversionOutputMin == null){
+        conversionOutputMin = 0;
+    }
+    if(conversionOutputMax == "" || conversionOutputMax == null){
+        conversionOutputMax = 100;
+    }
+    
+    //Convert values to Number
+    conversionInputMin = Number(conversionInputMin);
+    conversionInputMax = Number(conversionInputMax);
+    conversionOutputMin = Number(conversionOutputMin);
+    conversionOutputMax = Number(conversionOutputMax);
+    
+    //Get background box node
+    background = nodeFilter(component, "Id", "Background");
+    
+    //Get textbox node
+    textbox = nodeFilter(component, "Id", "Textbox");
+    
+    //Get point type
+    pointType = component.getAttribute("PointType");
+    
+    //Get status image nodes
+    forceImage = nodeFilter(component, "Id", "ForceImage");
+    lockoutImage = nodeFilter(component, "Id", "LockoutImage");
+    networkImage = nodeFilter(component, "Id", "NetworkImage");
+    
+    //Get digital properties
+    digitalOn = component.getAttribute("DigitalOn");
+    digitalOff = component.getAttribute("DigitalOff");
+    
+    //Handle null digital properties
+    if(digitalOn == "" || digitalOn == null){
+        digitalOn = "Active";
+    }
+    if(digitalOff == "" || digitalOff == null){
+        digitalOff = "Inactive";
+    }
+    
+    //Get units and decimals
+    units = component.getAttribute("Units");
+    decimals = parseInt(component.getAttribute("Decimals"));
+    
+    //Handle null decimals
+    if(decimals == "" || decimals == null){
+        decimals = 0;
+    }
+    
+    //Get statetext and parse into array
+    var stateTextArr = String(component.getAttribute("StateTextInput")).split(",");
+    for(var i = 0; i < stateTextArr.length; i++){
+        var arr = stateTextArr[i].split(";");
+        if(arr[1] == "" || arr[1] == null || typeof arr[1] == "undefined"){
+            arr[1] = String(arr[0]);
+        }
+        stateTextInput[arr[0]] = arr[1];
+    }
+    
+    //Get default styling of UP
+    backgroundStroke = background.getAttribute("Stroke");
+    backgroundStrokeWidth = background.getAttribute("StrokeWidth");
+    backgroundFill = background.getAttribute("Fill");
+    textboxStroke = textbox.getAttribute("Stroke");     
+}
+
 function onSignalChange(evt){
     try{
+        //Prevent default red X on status error
+        evt.preventDefault();
+        
+        //Get target and target Id
         var target = evt.getTarget();
-        targetId = target.getAttribute("Id");
+        var targetId = target.getAttribute("Id");
         
         if(targetId == "StateText"){
+        
+            //Do nothing on StateText
+            
+        } else if(targetId == "RequestedValue"){
+        
+            //Store RequestedValue
+            requestedValueBindValue = Number(evt.getValue());
+            
         } else if(targetId == "Value"){
+        
+            //Check for OK status
+            valueBindStatus = Number(evt.getStatus());
+            
+            //Check for point type
             switch(String(pointType).toLowerCase()){
             case "d": case "digital": case "b": case "binary":
+            
+                //Logic for digital display
                 getBool(evt.getValue()) ? textbox.setAttribute("Content", digitalOn) : textbox.setAttribute("Content", digitalOff);
                 break;
+                
             case "s": case "string":
+                
+                //Strings just return whatever was provided
                 textbox.setAttribute("Content", evt.getValue());
                 break;
+                
             case "t": case "tristate": case "m": case "multistate":
+            
+                //Get statetext properties
                 var currentStateText = component.getAttribute("StateText");
+                
+                //Initialize blank variable to hold final multistate text
                 var multistateText;
+                
+                //Handle null statetext properties
                 if(currentStateText == "" || currentStateText == null){
+                
                     multistateText = evt.getValue();
+                
                 } else{
+                
+                    //Get current bind value for StateText input bind
                     stateTextBindValue = component.getAttribute("StateText");
-                    var arr = stateTextBindValue.split(";")
+                    var arr = stateTextBindValue.split(";");
+                    
+                    //Properly adjust array indexing
                     multistateText = arr[Number(evt.getValue()) - 1];
+                    
+                    //Handle undefined
                     if(typeof multistateText == "undefined"){
                         multistateText = Number(evt.getValue());
                     }
                 }
+                
+                //Override StateText input bind value with custom if exists
                 Object.keys(stateTextInput).forEach(function(key){
                     if(parseInt(evt.getValue()) == parseInt(key)){
                         multistateText = stateTextInput[key];
                     }
                 });
+                
+                //Set UP text
                 textbox.setAttribute("Content", multistateText);
                 break;
+                
             default:
+                
+                //If no custom units are defined, get those defined in SBO
                 if(units == "" || units == null){
                     units = evt.getUnit();
                 }
+                
+                
                 if(getBool(analogConversion)){
+                
+                    //Adjust value if conversion property was set to true
                     var calculated = Number(evt.getValue()) * (conversionOutputMax - conversionOutputMin) / (conversionInputMax - conversionInputMin);
+                    
+                    //Add decimals
                     valueBindValue = calculated.toFixed(decimals);
+                    
                 } else{
+                    
+                    //If no conversion, only set decimals on bind value
                     valueBindValue = parseFloat(evt.getValue()).toFixed(decimals);
                 }
+                
+                //Add units if they exist
                 if(units == "" || units == null){
                     textbox.setAttribute("Content", valueBindValue);
                 } else {
                     textbox.setAttribute("Content", valueBindValue + " " + units);
                 }
             }
+        
+        //Handle alarm state
         } else if(targetId == "Alarm"){
+            alarmBindStatus = Number(evt.getStatus());
             if(getBool(evt.getValue())){
                 alarmState = 1;
             } else {
                 alarmState = 0;
             }
         }
+        
+        /*Order of checks determines priority in viewing*/
+        
+        //Check for forcing
         forceCheck(evt);
+        
+        //Check for SE8000 device lockout
         lockoutCheck(evt);
+        
+        //Check for network status
+        networkCheck(evt);
+        
+        //Issue alarm styling at end to always guarantee that alarming is shown
         alarmStyle();
 
     } catch(err){
@@ -342,17 +534,36 @@ function onSignalChange(evt){
 
 function onMouseClick(evt){
     try{
+        
+        //Only do things if left-clicked
+        //This allows right clicking to brind up bind options
         if(evt.getButton() == 0){
+        
+            //Prevent default action
             evt.preventDefault();
+            //evt.stopPropagation();
+            
+            //Check for SE8000 series
             if(getBool(viconics)){
+            
+                //Clicking should open .../RelinquishDefault properties, not .../Value properties, if it exists
                 relinquishDefaultBindName = relinquishDefaultBind.getFullBindName();
-                if(!invoke(relinquishDefaultBindName, "EditProperties")){
+                if(relinquishDefaultBindValue == null || relinquishDefaultBindValue == ""){
                     valueBindName = valueBind.getFullBindName();
                     invoke(valueBindName, "EditProperties");
                 } else{
                     invoke(relinquishDefaultBindName, "EditProperties");
                 }
+                
+            //Check for SBO output
+            } else if(requestedValueBindValue != null /*&& requestedValueBindValue != ""*/){
+            
+                //Clicking should open .../RequestedValue properties, not .../Value properties, if it exists
+                requestedValueBindName = requestedValueBind.getFullBindName();
+                invoke(requestedValueBindName, "EditProperties");
+                
             } else{
+                //Otherwise, open .../Value properties
                 valueBindName = valueBind.getFullBindName();
                 invoke(valueBindName, "EditProperties");
             }
@@ -362,32 +573,51 @@ function onMouseClick(evt){
     }
 }
 
+//Alarm styling
 function alarmStyle(){
     try{
+    
+        //Alarm is ON properties
         if(alarmState){
-            if(!forceState && !lockoutState){
+            
+            //Don't override the stroke if any of the other states are active
+            if(!(forceState + lockoutState + networkState)){
                 background.setAttribute("Stroke", alarmStroke);
             }
+            
+            //Set background and text colors
             background.setAttribute("Fill", alarmFill);
             textbox.setAttribute("Stroke", alarmTextboxStroke);
+            
+        //Alarm is OFF poroperties    
         } else {
-            if(!forceState && !lockoutState){
+        
+            //Don't override the stroke if any of the other states are active
+            if(!(forceState + lockoutState + networkState)){
                 background.setAttribute("Stroke", backgroundStroke);
             }
+            
+            //Set background and text back to normal
             background.setAttribute("Fill", backgroundFill);
             textbox.setAttribute("Stroke", textboxStroke);
+            
         }
     } catch(err){
         handleError(err);
     }
 }
 
+//Forcing styling
 function forceStyle(){
     try{
+        
+        //Forcing is ON proprerties
         if(forceState){
             background.setAttribute("Stroke", forceStroke);
             background.setAttribute("StrokeWidth", forceStrokeWidth);
             forceImage.setAttribute("Visibility", "Visible");
+            
+        //Forcing is OFF properties
         } else{
             background.setAttribute("Stroke", backgroundStroke);
             background.setAttribute("StrokeWidth", backgroundStrokeWidth);
@@ -398,83 +628,152 @@ function forceStyle(){
     }
 }
 
+//Lockout styling
 function lockoutStyle(){
     try{
-        if(lockoutState && !forceState){
+        
+        //Lockout is ON properties
+        if(lockoutState && !forceState && !networkState){
             background.setAttribute("Stroke", lockoutStroke);
             background.setAttribute("StrokeWidth", lockoutStrokeWidth);
             lockoutImage.setAttribute("Visibility", "Visible");
+        
+        //Lockout is OFF properties
         } else{
-            if(!forceState){
+            if(!forceState && !networkState){
                 background.setAttribute("Stroke", backgroundStroke);
                 background.setAttribute("StrokeWidth", backgroundStrokeWidth);
             }
             lockoutImage.setAttribute("Visibility", "Hidden");
+            
         }
     } catch(err){
         handleError(err);
     }
 }
 
+//Network status styling
+function networkStyle(){
+    try{
+        
+        //Network status is in ERROR properties
+        if(networkState){
+            background.setAttribute("Stroke", networkStroke);
+            background.setAttribute("StrokeWidth", networkStrokeWidth);
+            networkImage.setAttribute("Visibility", "Visible");
+            
+        //Network status is OK properties
+        } else{
+            
+            //Don't override the stroke if any of the other states are active
+            if(!(forceState + lockoutState)){
+                background.setAttribute("Stroke", backgroundStroke);
+                background.setAttribute("StrokeWidth", backgroundStrokeWidth);
+            }
+            networkImage.setAttribute("Visibility", "Hidden");
+        }
+    } catch(err){
+        handleError(err);
+    }
+}
+
+//Lockout check
 function lockoutCheck(evt){
     try{
+        
+        //Get target and target Id
         var target = evt.getTarget();
         targetId = target.getAttribute("Id");
         
         //For Viconics series controllers, if any Priority is written to, then the physical device is locked out
-        if(targetId == "Priority" && getBool(viconics)){
+        if(targetId == "Priority" && getBool(viconics) && priorityBindValue != priorityMetaDataValue){
             if(priorityBindValue == "" || priorityBindValue == null) {
                 lockoutState = 0;
             } else{
                 lockoutState = 1;
             }
         }
+        
+        //Issue lockout styling
         lockoutStyle();
     } catch(err){
         handleError(err);
     }
 }
 
+//Network status check
+function networkCheck(evt){
+    try{
+    
+        //It is necessary to check both the .../Value and AlarmBind/... for network issues since they are typically separate points
+        if(alarmBindStatus == 0 || valueBindStatus == 0){
+            networkState = 1;
+        } else{
+            networkState = 0;
+        }
+        
+        //Issue network status styling
+        networkStyle(evt);
+    } catch(err){
+        handleError(err);
+    }
+}
 
+//Forcing check
 function forceCheck(evt){
     try{
+        
+        //Get target and target Id
         var target = evt.getTarget();
-        targetId = target.getAttribute("Id");
+        var targetId = target.getAttribute("Id");
         relinquishDefaultBindValue = component.getAttribute("RelinquishDefault");
+        
+        /*Order of bind checking determines force state*/
         
         //Priority checking must come before OutOfService checking since Values and Outputs have an unused property of OutOfService
         if(targetId == "Priority"){
             priorityBindValue = Number(evt.getValue());
-            if(priorityBindValue == 8){
+            if(priorityBindValue == priorityMetaDataValue){
                 forceState = 1;
             } else {
                 forceState = 0;
             }
+            
+        //OutOfService is only significant if priority and RelinquishDefault binds are null
+        //Always double check for priority match since BACnet Values and Outputs have OutOfService binds that do not affect forcing
         } else if(targetId == "OutOfService"){
             oosBindValue = evt.getValue();
-            if((getBool(oosBindValue) && (priorityBindValue == "" || priorityBindValue == null) && (relinquishDefaultBindValue == "" || relinquishDefaultBindValue == null)) || priorityBindValue == 8){
+            if((getBool(oosBindValue) && (priorityBindValue == "" || priorityBindValue == null) && (relinquishDefaultBindValue == "" || relinquishDefaultBindValue == null)) || priorityBindValue == priorityMetaDataValue){
                 forceState = 1;
             } else{
                 forceState = 0;
             }
+            
+        //SE8000 series still indicate forcing from the priority bind, but it is necessary to ensure that RelinquishDefault value is updated
         } else if(targetId == "RelinquishDefault"){
             relinquishDefaultBindValue = evt.getValue();
-            if(priorityBindValue == 8){
+            if(priorityBindValue == priorityMetaDataValue){
                 forceState = 1;
             } else{
                 forceState = 0;
             }
+            
+        //Infinet binding is true if BACnet binds are null, but State is not
         } else if(targetId == "State"){
             stateBindValue = evt.getValue();
-            if(!getBool(stateBindValue) && (oosBindValue == "" || oosBindValue == null) && (priorityBindValue == "" || priorityBindValue == null)){
+            if(!getBool(stateBindValue) &&(oosBindValue == "" || oosBindValue == null) && (priorityBindValue == "" || priorityBindValue == null)){
                 forceState = 1;
             } else{
                 forceState = 0;
             }
-        } else if(targetId == "Value" && (stateBindValue == "" || stateBindValue == null) && (oosBindValue == "" || oosBindValue == null) && (priorityBindValue == "" || priorityBindValue == null)){
-            forceState = (parseInt(evt.getStatus()) == 3) ? 1 : 0;
             
+        //If all forcing binds are null, the bound object is of SBO type
+        //For some reason, stateBindValue == "" && stateBindValue == null fails to work properly, so stateBindValue == "" has been removed from null check
+        } else if(targetId == "Value" && (stateBindValue == null) && (oosBindValue == "" || oosBindValue == null) && (priorityBindValue == "" || priorityBindValue == null)){
+            forceState = (parseInt(evt.getStatus()) == 3) ? 1 : 0;
         }
+        
+        //Issue forcing style
         forceStyle();
     } catch(err){
         handleError(err);
@@ -583,8 +882,10 @@ function getBool(check){
             OnDocumentLoad="onDocumentLoad" OnMouseClick=""
             OnMouseDown="" OnMouseMove="onMouseMove"
             OnMouseOut="onMouseOut" OnMouseOver="onMouseOver"
-            OnMouseUp="" OnSignalChange="" ToolTipFill="#E0E0E0"
-            ToolTipFontSize="48" ToolTipStroke="#404040"
+            OnMouseUp="" OnSignalChange="" SystemThemeEnable="True"
+            SystemThemeRules="ToolTipFill:Theme6;ToolTipStroke:Theme2;ToolTipFontSize:UP_TOOLTIP_FONTSIZE"
+            ToolTipFill="#E0E0E0" ToolTipFontSize="48"
+            ToolTipStroke="#404040"
                 ToolTipText=""><![CDATA[/*  
     TooTip For Universal Point (only)
     Version 1.0 - Magenta
@@ -624,29 +925,6 @@ function onDocumentLoad(evt){
     try{
         component = evt.getCurrentTarget();
         textbox = nodeFilter(component, "Id", "Textbox");
-        var scripts = component.getElementsByTagName("Script");
-        for(var i = 0; i < scripts.length; i++){
-            if(scripts.item([i]).getAttribute("Id") == "ToolTip"){
-                toolTipScript = scripts.item([i]);
-            }
-        }
-        toolTipText = String(component.getAttribute("ToolTipText"));
-        TGMLDocument = component.getOwnerDocument();
-        TGMLTag = TGMLDocument.getElementsByTagName("Tgml").item([0]);
-        created = 0;
-        toolTipBind = toolTipScript.getElementsByTagName("Bind").item([0]);
-        toolTipFontSize = parseFloat(toolTipScript.getAttribute("ToolTipFontSize"));
-        if(toolTipFontSize == "" || toolTipFontSize == null || toolTipFontSize == 0){
-            toolTipFontSize = 18;
-        }
-        toolTipStroke = String(toolTipScript.getAttribute("ToolTipStroke"));
-        if(toolTipStroke == "" || toolTipStroke == null){
-            toolTipStroke = "#404040";
-        }
-        toolTipFill = String(toolTipScript.getAttribute("ToolTipFill"));
-        if(toolTipFill == "" || toolTipFill == null){
-            toolTipFill = "#E0E0E0";
-        }
     } catch(err){
         handleError(err);
     }
@@ -665,7 +943,31 @@ function onMouseOut(evt){
 
 function onMouseOver(evt){
     try{
-        if(!created){
+        if(!created && Enable(component.getAttribute("ToolTipEnable"))){
+            var scripts = component.getElementsByTagName("Script");
+            for(var i = 0; i < scripts.length; i++){
+                if(scripts.item([i]).getAttribute("Id") == "ToolTip"){
+                    toolTipScript = scripts.item([i]);
+                }
+            }
+            toolTipText = String(component.getAttribute("ToolTipText"));
+            TGMLDocument = component.getOwnerDocument();
+            TGMLTag = TGMLDocument.getElementsByTagName("Tgml").item([0]);
+            created = 0;
+            toolTipBind = toolTipScript.getElementsByTagName("Bind").item([0]);
+            toolTipFontSize = parseFloat(toolTipScript.getAttribute("ToolTipFontSize"));
+            if(toolTipFontSize == "" || toolTipFontSize == null || toolTipFontSize == 0){
+                toolTipFontSize = 18;
+            }
+            toolTipStroke = String(toolTipScript.getAttribute("ToolTipStroke"));
+            if(toolTipStroke == "" || toolTipStroke == null){
+                toolTipStroke = "#404040";
+            }
+            toolTipFill = String(toolTipScript.getAttribute("ToolTipFill"));
+            if(toolTipFill == "" || toolTipFill == null){
+                toolTipFill = "#E0E0E0";
+            }
+        
             toolTipFontSize = parseFloat(toolTipScript.getAttribute("ToolTipFontSize"));
             if(toolTipFontSize == "" || toolTipFontSize == null || toolTipFontSize == 0 || isNaN(toolTipFontSize)){
                 toolTipFontSize = 18;
@@ -702,13 +1004,12 @@ function onMouseOver(evt){
             translate.setAttribute("Y", mouseY - 5);
             toolTip.appendChild(translate);
             created = 1;
-            if(textbox.getAttribute("Content") == "" || textbox.getAttribute("Content") == null || !Enable(component.getAttribute("ToolTipEnable"))){
+            if(textbox.getAttribute("Content") == "" || textbox.getAttribute("Content") == null){
                 toolTip.setAttribute("Visibility", "Hidden");
             }
             else{
                 toolTip.setAttribute("Visibility", "Visible");
-            }
-            
+            }    
         }
         
     } catch(err){
@@ -718,10 +1019,12 @@ function onMouseOver(evt){
 
 function onMouseMove(evt){
     try{
-        mouseX = parseFloat(evt.getScreenX());
-        mouseY = parseFloat(evt.getScreenY());
-        translate.setAttribute("X", mouseX + toolTipFontSize / 5);
-        translate.setAttribute("Y", mouseY - toolTipFontSize / 1.5);
+        if(created){
+            mouseX = parseFloat(evt.getScreenX());
+            mouseY = parseFloat(evt.getScreenY());
+            translate.setAttribute("X", mouseX + toolTipFontSize / 5);
+            translate.setAttribute("Y", mouseY - toolTipFontSize / 1.5);
+        }
     } catch(err){
         handleError(err);
     }
@@ -826,15 +1129,10 @@ function getBool(check){
         handleError(err);
     }
 }]]><Bind
-                Attribute="ToolTipBind" Id="ToolTipBind" Name="Value">
-                <Expose ExposedAttribute="Name" Name="Bind Value"/>
-            </Bind>
+                Attribute="ToolTipBind" Id="ToolTipBind" Name="Value"/>
             <Expose ExposedAttribute="ToolTipText" Name="ToolTip Text"/>
-            <Expose ExposedAttribute="ToolTipFontSize" Name="ToolTip Font Size"/>
-            <Expose ExposedAttribute="ToolTipStroke" Name="ToolTip Font Stroke"/>
-            <Expose ExposedAttribute="ToolTipFill" Name="ToolTip Fill"/>
         </Script>
         <Metadata Author="Kevin Flathers" Id="Version Info"
-            ReleaseDate="06/12/2017" Version="2.0 - Suede"/>
+            ReleaseDate="09/11/2017" Version="3.0"/>
     </Component>
 </Tgml>

@@ -1,6 +1,6 @@
 """
 Last Edited By: Kevin Flathers
-Date Las Edited: 06/26/2017
+Date Last Edited: 06/26/2017
 
 Author: Kevin Flathers
 Date Created: 05/27/2017
@@ -47,8 +47,6 @@ class MITSubtitle(UniversalPoint):
 			'Subtitle': '',
 			'PointBind': 'Universal',
 			'PointType': 'Analog',
-			'BindValue': 'Value',
-			'BindAlarm': 'Alarm',
 			'Units': '',
 			'Decimals': '1',
 			'DigitalOff': 'Off',
@@ -60,11 +58,7 @@ class MITSubtitle(UniversalPoint):
 			'ConversionInputMax': '10',
 			'ConversionOutputMin': '0',
 			'ConversionOutputMax': '100',
-			'Text Align': 'Center',
 			'ToolTipText': '',
-			'ToolTipFontSize': '48',
-			'ToolTipFontStroke': '#404040',
-			'ToolTipFill': '#E0E0E0',
 			'ToolTipEnable': 'False'
 		}
 
