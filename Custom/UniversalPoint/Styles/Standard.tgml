@@ -2,15 +2,15 @@
 
 <!--[DocumentInformation]
 Created: 2017-07-11 10:15
-Modified: 2017-09-11 14:11
+Modified: 2017-10-11 08:39
 -->
-<?tgml version="1.3"?><Tgml ComponentCounter="5" GridSize="10">
+<?tgml version="1.3"?><Tgml ComponentCounter="6" GridSize="10">
     <Component AnalogConversion="False" Clip="False" ContentHeight="20"
         ContentWidth="125" ConversionInputMax="10"
         ConversionInputMin="0" ConversionOutputMax="100"
         ConversionOutputMin="0" Decimals="1" DigitalOff="Off"
-        DigitalOn="On" Height="20.0" Id="UP v3.0" Left="0"
-        Name="UP v3.0 - Titles" PointType="Analog" StateTextInput=""
+        DigitalOn="On" Height="20.0" Id="UP" Left="0"
+        Name="UP v3.1 - Titles" PointType="Analog" StateTextInput=""
         SystemThemeEnable="True"
         SystemThemeRules="ToolTipEnable:UP_TOOLTIP_ENABLE"
         ToolTipEnable="False" ToolTipFill="#E0E0E0" ToolTipFontSize="48"
@@ -35,7 +35,8 @@ Modified: 2017-09-11 14:11
         <Rectangle Fill="#FFFFFF" Height="20" Id="" Left="0.0"
             Opacity="1.0" RadiusX="5" RadiusY="5" Stroke="#626469"
             StrokeDashArray="0.0" StrokeWidth="1.0"
-            SystemThemeEnable="True" SystemThemeRules="Stroke:UP_BORDER"
+            SystemThemeEnable="True"
+            SystemThemeRules="Stroke:UP_BORDER;RadiusX:UP_RADIUSX;RadiusY:UP_RADIUSY"
             Top="0.0" Width="125">
             <LinearGradient EndPoint="0,1">
                 <GradientStop Color="#FEFEFE" Offset="0"
@@ -47,7 +48,9 @@ Modified: 2017-09-11 14:11
         <Rectangle Fill="None" Height="20" Id="Background" Left="0.0"
             Opacity="1.0" RadiusX="5" RadiusY="5" Stroke="None"
             StrokeDashArray="0.0" StrokeWidth="1.0"
-            SystemThemeEnable="False" SystemThemeRules="" Top="0.0" Width="125"/>
+            SystemThemeEnable="True"
+            SystemThemeRules="RadiusX:UP_RADIUSX;RadiusY:UP_RADIUSY"
+            Top="0.0" Width="125"/>
         <Bind Attribute="Priority" Id="Priority" Name="ActiveCommandPriority"/>
         <Bind Attribute="OOS" Id="OutOfService" Name="OutOfService"/>
         <Bind Attribute="State" Id="State" Name="State"/>
@@ -72,7 +75,7 @@ Modified: 2017-09-11 14:11
             Id="Textbox" Left="0.0" Opacity="1.0" Stroke="#000000"
             SystemThemeEnable="True"
             SystemThemeRules="Stroke:UP_VALUE;HorizontalAlign:UP_HORIZONTALALIGN"
-            TextDecoration="None" Top="0.0" VerticalAlign="Middle" Width="125"><![CDATA[Universal v3.0]]></TextBox>
+            TextDecoration="None" Top="0.0" VerticalAlign="Middle" Width="125"><![CDATA[Universal v3.1]]></TextBox>
         <Expose ExposedAttribute="ToolTipEnable" Name="Tool Tip Enable"/>
         <Expose ExposedAttribute="ToolTipText" Name="ToolTip Text"/>
         <Component Clip="False" ContentHeight="20.0" ContentWidth="20.0"
@@ -81,8 +84,9 @@ Modified: 2017-09-11 14:11
             <Rectangle Fill="#0060FF" Height="20.0" Id=""
                 Left="0.002059936523438" Opacity="1.0" RadiusX="5"
                 RadiusY="5" Stroke="#0060FF" StrokeDashArray="0.0"
-                StrokeWidth="1.0" Top="-0.004470825195312"
-                Visibility="Visible" Width="20.0"/>
+                StrokeWidth="1.0" SystemThemeEnable="True"
+                SystemThemeRules="RadiusX:UP_RADIUSX;RadiusY:UP_RADIUSY"
+                Top="-0.004470825195312" Visibility="Visible" Width="20.0"/>
             <Component Clip="False" ContentHeight="14.9"
                 ContentWidth="10.98" Height="14.9" Left="4.9" Top="2.1" Width="10.98">
                 <Ellipse Fill="None" Height="11.474565045404063"
@@ -111,7 +115,10 @@ Modified: 2017-09-11 14:11
             Height="20.0" Id="ForceImage" Left="105.0" Top="0.0"
             Visibility="Hidden" Width="20.0">
             <Rectangle Fill="#FFD100" Height="20.0" Left="0.0"
-                RadiusX="5" RadiusY="5" Stroke="None" Top="0.0" Width="20.0"/>
+                RadiusX="5" RadiusY="5" Stroke="None"
+                SystemThemeEnable="True"
+                SystemThemeRules="RadiusX:UP_RADIUSX;RadiusY:UP_RADIUSY"
+                Top="0.0" Width="20.0"/>
             <Component Clip="False" ContentHeight="10.1"
                 ContentWidth="15.0" Height="10.100000000000001" Left="4"
                 Top="5.0" Width="15.0">
@@ -134,7 +141,10 @@ Modified: 2017-09-11 14:11
             Height="20.0" Id="NetworkImage" Left="105" Top="0"
             Visibility="Hidden" Width="20.0">
             <Rectangle Fill="#FF6000" Height="20.0" Left="0.0"
-                RadiusX="5" RadiusY="5" Stroke="#FF6000" Top="0.0" Width="20.0"/>
+                RadiusX="5" RadiusY="5" Stroke="#FF6000"
+                SystemThemeEnable="True"
+                SystemThemeRules="RadiusX:UP_RADIUSX;RadiusY:UP_RADIUSY"
+                Top="0.0" Width="20.0"/>
             <Component Clip="False" ContentHeight="75.0"
                 ContentWidth="85.0" Height="13.235294446349144"
                 Left="2.5" Top="3.382352828979492" Width="15.0">
@@ -885,7 +895,7 @@ function getBool(check){
         handleError(err);
     }
 }]]></Script>
-        <Script Id="ToolTip" Name="ToolTip_1.1_Magenta"
+        <Script Id="ToolTip" Name="ToolTip_2.0"
             OnDocumentLoad="onDocumentLoad" OnMouseClick=""
             OnMouseDown="" OnMouseMove="onMouseMove"
             OnMouseOut="onMouseOut" OnMouseOver="onMouseOver"
@@ -893,14 +903,14 @@ function getBool(check){
             SystemThemeRules="ToolTipFill:Theme6;ToolTipStroke:Theme2;ToolTipFontSize:UP_TOOLTIP_FONTSIZE"
             ToolTipFill="#E0E0E0" ToolTipFontSize="48"
             ToolTipStroke="#404040"
-                ToolTipText=""><![CDATA[/*  
+                ToolTipText="$NAME"><![CDATA[/*  
     TooTip For Universal Point (only)
-    Version 1.0 - Magenta
+    Version 2.0
     
     Author: Kevin Flathers
     Date Created: 04/07/2017
     Last Edited By: Kevin Flathers
-    Date Last Edited: 04/12/2017
+    Date Last Edited: 09/13/2017
 */
 
 try{
@@ -923,6 +933,9 @@ try{
     var toolTipStroke;
     var toolTipFill;
     var textbox;
+    var tgmlWidth;
+    var toolTipWidth;
+    var toolTipHeight;
 
 } catch(err){
     console.log(err + " " + err.stack);
@@ -932,6 +945,8 @@ function onDocumentLoad(evt){
     try{
         component = evt.getCurrentTarget();
         textbox = nodeFilter(component, "Id", "Textbox");
+        
+        tgmlWidth = Number(evt.getCurrentTarget().getOwnerDocument().getElementsByTagName("Tgml").item([0]).getAttribute("Width"));
     } catch(err){
         handleError(err);
     }
@@ -987,10 +1002,13 @@ function onMouseOver(evt){
             toolTip.setAttribute("Id", "ToolTip");
             toolTip.setAttribute("Name", "ToolTip");
             toolTip.setAttribute("Fill", toolTipFill);
+            toolTip.setAttribute("Visibility", "Hidden");
             toolTip.setAttribute("Opacity", "1");
             toolTip.setAttribute("Stroke", toolTipStroke);
             if(toolTipText == "" || toolTipText == null){
                 toolTip.setAttribute("Content", "  " + textbox.getAttribute("Content") + "  ");
+            } else if(toolTipText == "$NAME"){
+                toolTip.setAttribute("Content", "  " + component.getAttribute("Name") + "  ")
             } else{
                 toolTip.setAttribute("Content", "  " + toolTipText + "  ");
             }
@@ -1010,13 +1028,7 @@ function onMouseOver(evt){
             translate.setAttribute("X", mouseX + 5);
             translate.setAttribute("Y", mouseY - 5);
             toolTip.appendChild(translate);
-            created = 1;
-            if(textbox.getAttribute("Content") == "" || textbox.getAttribute("Content") == null){
-                toolTip.setAttribute("Visibility", "Hidden");
-            }
-            else{
-                toolTip.setAttribute("Visibility", "Visible");
-            }    
+            created = 1;    
         }
         
     } catch(err){
@@ -1031,6 +1043,23 @@ function onMouseMove(evt){
             mouseY = parseFloat(evt.getScreenY());
             translate.setAttribute("X", mouseX + toolTipFontSize / 5);
             translate.setAttribute("Y", mouseY - toolTipFontSize / 1.5);
+            
+            toolTipWidth = Number(toolTip.getBoundingBox().get_Width());
+            toolTipHeight = Number(toolTip.getBoundingBox().get_Height());
+            
+            if(((mouseX + toolTipFontSize / 5) + toolTipWidth) > tgmlWidth) {  
+                translate.setAttribute("X", (tgmlWidth - toolTipWidth));  
+            }
+            
+            if(((mouseY - toolTipFontSize / 1.5) - toolTipHeight) < 0) {  
+                translate.setAttribute("Y", (Number(component.getAttribute("Top")) + Number(component.getAttribute("Height")) * 3));  
+            }
+            if(textbox.getAttribute("Content") == "" || textbox.getAttribute("Content") == null){
+                toolTip.setAttribute("Visibility", "Hidden");
+            }
+            else{
+                toolTip.setAttribute("Visibility", "Visible");
+            }
         }
     } catch(err){
         handleError(err);
@@ -1140,6 +1169,6 @@ function getBool(check){
             <Expose ExposedAttribute="ToolTipText" Name="ToolTip Text"/>
         </Script>
         <Metadata Author="Kevin Flathers" Id="Version Info"
-            ReleaseDate="09/11/2017" Version="3.0"/>
+            ReleaseDate="10/11/2017" Version="3.1"/>
     </Component>
 </Tgml>
